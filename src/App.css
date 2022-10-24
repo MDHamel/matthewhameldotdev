@@ -1,38 +1,185 @@
-.App {
-  text-align: center;
+
+.bootScreen{
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #111;
+  z-index: 1000;
+  animation: hideafter .5s linear 5s forwards; 
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.boot{
+  font-family:  monospace;
+  font-size: 12px;
+  position: absolute;
+  left: 50px;
+  bottom: 0;
   color: white;
+  animation: hideafter .15s linear 1s forwards; 
 }
 
-.App-link {
-  color: #61dafb;
+.center{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.logo{
+
+  scale: .5;
+  position: fixed;
+  opacity: 0;
+}
+
+.logoMini{
+  position: absolute;
+}
+
+.logoBox{
+  scale:.1;
+  position:inherit;
+  width: fit-content;
+  z-index: 100;
+}
+
+.logo.white{
+  animation: reveal forwards .25s 1.5s, glitch .75s linear forwards 4s;
+}
+
+.logo.magenta{
+  animation: reveal forwards .25s 1.5s, glitchM .75s linear forwards 4s;
+  filter: sepia(1) hue-rotate(-90deg) saturate(100);
+}
+
+.logo.cyan{
+  animation: reveal forwards .25s 1.5s, glitchC .75s linear forwards 4s;
+  filter: sepia(1) hue-rotate(90deg) saturate(100);
+}
+
+.logoBox:hover .white{
+  animation: glitch 1s linear infinite;
+}
+.logoBox:hover .magenta{
+  animation: glitchM 1s linear infinite;
+  filter: sepia(1) hue-rotate(-90deg) saturate(100);
+}
+
+.logoBox:hover .cyan{
+  animation: glitchC 1s linear infinite;
+  filter: sepia(1) hue-rotate(90deg) saturate(100);
+}
+
+
+
+@keyframes reveal{
+  from{
+    opacity: 0;
   }
-  to {
-    transform: rotate(360deg);
+  to{
+    opacity: 1;
   }
 }
+@keyframes hideafter{
+  to{
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes glitch{
+  0%{
+    opacity: 1;
+  }
+  2%,70%{
+    transform: translate(20px,0) skew(20deg);
+  }
+  12%,60%{
+    transform: translate(-20px,0) skew(0deg);
+  }
+  50%{
+    transform: translate(0,0) skew(0deg); 
+  }
+  55%,65%{
+    transform: translate(16px,0) skew(30deg); 
+  }
+  90%{
+    transform: translate(0,0) skew(0deg); 
+  }
+  93%{
+    transform: translate(-32px,0) skew(-62deg); 
+  }
+  95%{
+    transform: translate(0px,0) skew(82deg);
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+  }
+}
+
+@keyframes glitchM{
+  0%{
+    opacity: 1;
+  }
+  2%,70%{
+    transform: translate(5px,0) skew(10deg);
+  }
+  12%,60%{
+    transform: translate(-5px,0) skew(10deg);
+  }
+  50%{
+    transform: translate(0,0) skew(5deg); 
+  }
+  55%,65%{
+    transform: translate(16px,0) skew(15deg); 
+  }
+  90%{
+    transform: translate(0,0) skew(5deg); 
+  }
+  93%{
+    transform: translate(-32px,0) skew(-40deg); 
+  }
+  95%{
+    transform: translate(0px,0) skew(65deg);
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+  }
+}
+
+@keyframes glitchC{
+  0%{
+    opacity: 1;
+  }
+  2%,70%{
+    transform: translate(40px,0) skew(40deg);
+  }
+  12%,60%{
+    transform: translate(-40px,0) skew(-5deg);
+  }
+  50%{
+    transform: translate(0,0) skew(-2deg); 
+  }
+  55%,65%{
+    transform: translate(32px,0) skew(30deg); 
+  }
+  90%{
+    transform: translate(0,0) skew(0deg); 
+  }
+  93%{
+    transform: translate(-48px,0) skew(-40deg); 
+  }
+  95%{
+    transform: translate(0px,0) skew(90deg);
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+  }
+}
+
