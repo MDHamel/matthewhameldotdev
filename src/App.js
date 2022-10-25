@@ -1,18 +1,24 @@
 import bootText from "./boot.json";
 import './App.css';
-import {useState } from "react";
+import "./Logo.css";
+import {useState, useEffect} from "react";
 
 function App() {
   return (
     <div className="App">
+
       <section className="bootScreen">
         <Boot/>
         <LogoStartup />
       </section>
+
       <main>
-        <p>AHG</p>
-        <Logo/>
+        <Logo />
+
+        <Intro />
+
       </main>
+
     </div>
   );
 }
@@ -38,18 +44,24 @@ function Logo(){
 }
 
 function Boot(){
-  const [bootI, setBootI] = useState(1)
-  const display = bootText.text.slice(0,bootI).map((item)=>{return <p>{item}</p>});
+  const [inc, setInc] = useState(1);
+  const display = bootText.text.slice(0, inc).map((item)=>{return <p >{item}</p>});
 
+  function booting (i) {
+    console.log(i)
+    if(i <= bootText.text.length){
+      setInc(i)
+      setTimeout(()=>{booting(i+1)}, 13);
+    }   
+  };
 
-  const bootInc = () => {
-    if(bootI >= bootText.text.length){
-      clearInterval(inter);
-    }
-    setBootI(bootI+1);
-  }
+  useEffect(()=>{
+    setTimeout(()=>{booting(inc)}, 13);
+    return () => {};
+  }, [])
   
-  const inter = setInterval(bootInc, 13);
+
+
   return(
     <section className='boot'>
         {display}
@@ -57,4 +69,27 @@ function Boot(){
   )
 }
 
+function Spacing(props){
+  return(<div style={{height:props.size, width:"100%"}} />)
+}
+
+function Intro(){
+
+  return(
+    <section className="intro content">
+      <div>
+        <p > Hello, my name is</p>
+        <h1 id="name">Matthew Hamel</h1>
+        <p >and I am a developer who likes making </p>
+        <h2  id="multitext">Things</h2>
+        
+      </div>
+      <Spacing size="100px"/>
+      
+    </section>
+
+  )
+}
+//<p style={{width:"700px", margin:"auto", textAlign:"left"}}>I am a software engineer who likes to develope projects like web apps, data processing applications, and games. I consider myself a full-stack developer who enjoys working on the front and back end of applications.</p>
+      
 export default App;

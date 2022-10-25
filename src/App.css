@@ -1,23 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url("./color.css");
 
-.bootScreen{
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100vw;
-  height: 100vh;
-  background-color: #111;
-  z-index: 1000;
-  animation: hideafter .5s linear 5s forwards; 
-}
-
-.boot{
-  font-family:  monospace;
-  font-size: 12px;
-  position: absolute;
-  left: 50px;
-  bottom: 0;
+.App{
+  display: flex;
   color: white;
-  animation: hideafter .15s linear 1s forwards; 
+  align-items: center;
 }
 
 .center{
@@ -28,158 +15,52 @@
   align-items: center;
 }
 
-.logo{
-
-  scale: .5;
-  position: fixed;
-  opacity: 0;
+main{
+  width: 1000px;
+  margin: auto;
 }
 
-.logoMini{
-  position: absolute;
+.content{
+  margin: 0 0;
+  font-size: 18px;
+  font-family:  Arial, Helvetica, sans-serif;
 }
 
-.logoBox{
-  scale:.1;
-  position:inherit;
-  width: fit-content;
-  z-index: 100;
+.intro{
+  margin-top: 30%;
+  text-align: center;
+  height: 90vh;
 }
 
-.logo.white{
-  animation: reveal forwards .25s 1.5s, glitch .75s linear forwards 4s;
-}
-
-.logo.magenta{
-  animation: reveal forwards .25s 1.5s, glitchM .75s linear forwards 4s;
-  filter: sepia(1) hue-rotate(-90deg) saturate(100);
-}
-
-.logo.cyan{
-  animation: reveal forwards .25s 1.5s, glitchC .75s linear forwards 4s;
-  filter: sepia(1) hue-rotate(90deg) saturate(100);
-}
-
-.logoBox:hover .white{
-  animation: glitch 1s linear infinite;
-}
-.logoBox:hover .magenta{
-  animation: glitchM 1s linear infinite;
-  filter: sepia(1) hue-rotate(-90deg) saturate(100);
-}
-
-.logoBox:hover .cyan{
-  animation: glitchC 1s linear infinite;
-  filter: sepia(1) hue-rotate(90deg) saturate(100);
+.intro p,h1,h2,span{
+  margin-top: 20px;
+  margin-bottom: 0;
+  width: 1000px;
+  padding:0;
 }
 
 
-
-@keyframes reveal{
-  from{
-    opacity: 0;
-  }
-  to{
-    opacity: 1;
-  }
-}
-@keyframes hideafter{
-  to{
-    opacity: 0;
-    visibility: hidden;
-  }
+#name{
+  font-size: 72px;
+  font-family: 'Roboto', monospace;
+  font-weight: 700;
+  color: var(--lightgreen)
 }
 
-@keyframes glitch{
-  0%{
-    opacity: 1;
-  }
-  2%,70%{
-    transform: translate(20px,0) skew(20deg);
-  }
-  12%,60%{
-    transform: translate(-20px,0) skew(0deg);
-  }
-  50%{
-    transform: translate(0,0) skew(0deg); 
-  }
-  55%,65%{
-    transform: translate(16px,0) skew(30deg); 
-  }
-  90%{
-    transform: translate(0,0) skew(0deg); 
-  }
-  93%{
-    transform: translate(-32px,0) skew(-62deg); 
-  }
-  95%{
-    transform: translate(0px,0) skew(82deg);
-    opacity: 1;
-  }
-  100%{
-    opacity: 0;
-  }
+#dev{
+  font-size: 48px;
+  font-family: 'Roboto', monospace;
+  font-weight: 700;
+  color: var(--darkergreen);
 }
 
-@keyframes glitchM{
-  0%{
-    opacity: 1;
-  }
-  2%,70%{
-    transform: translate(5px,0) skew(10deg);
-  }
-  12%,60%{
-    transform: translate(-5px,0) skew(10deg);
-  }
-  50%{
-    transform: translate(0,0) skew(5deg); 
-  }
-  55%,65%{
-    transform: translate(16px,0) skew(15deg); 
-  }
-  90%{
-    transform: translate(0,0) skew(5deg); 
-  }
-  93%{
-    transform: translate(-32px,0) skew(-40deg); 
-  }
-  95%{
-    transform: translate(0px,0) skew(65deg);
-    opacity: 1;
-  }
-  100%{
-    opacity: 0;
-  }
-}
+#multitext{
+  font-size: 68px;
+  font-family: 'Roboto', monospace;
+  font-weight: 700;
+  vertical-align: top;
 
-@keyframes glitchC{
-  0%{
-    opacity: 1;
-  }
-  2%,70%{
-    transform: translate(40px,0) skew(40deg);
-  }
-  12%,60%{
-    transform: translate(-40px,0) skew(-5deg);
-  }
-  50%{
-    transform: translate(0,0) skew(-2deg); 
-  }
-  55%,65%{
-    transform: translate(32px,0) skew(30deg); 
-  }
-  90%{
-    transform: translate(0,0) skew(0deg); 
-  }
-  93%{
-    transform: translate(-48px,0) skew(-40deg); 
-  }
-  95%{
-    transform: translate(0px,0) skew(90deg);
-    opacity: 1;
-  }
-  100%{
-    opacity: 0;
-  }
+  color: var(--midgreen);
+  line-height: 100px;
 }
 
