@@ -20,22 +20,12 @@
   }
 
   .logo{
-
     scale: .5;
     position: fixed;
     opacity: 0;
   }
   
-  .logoMini{
-    position: absolute;
-  }
-  
-  .logoBox{
-    scale:.1;
-    position:inherit;
-    width: fit-content;
-    z-index: 100;
-  }
+
   
   .logo.white{
     animation: reveal forwards .25s 1.5s, glitch 1s linear forwards 3.5s;
@@ -51,18 +41,7 @@
     filter: sepia(1) hue-rotate(90deg) saturate(100);
   }
   
-  .logoBox:hover .white{
-    animation: glitch 1s linear infinite;
-  }
-  .logoBox:hover .magenta{
-    animation: glitchM 1s linear infinite;
-    filter: sepia(1) hue-rotate(-90deg) saturate(100);
-  }
-  
-  .logoBox:hover .cyan{
-    animation: glitchC 1s linear infinite;
-    filter: sepia(1) hue-rotate(90deg) saturate(100);
-  }
+
   
   
   

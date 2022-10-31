@@ -16,7 +16,7 @@
 }
 
 main{
-  width: 1000px;
+  width: 1200px;
   margin: auto;
 }
 
@@ -27,40 +27,136 @@ main{
 }
 
 .intro{
-  margin-top: 30%;
-  text-align: center;
-  height: 90vh;
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  height: 100vh;
 }
 
 .intro p,h1,h2,span{
-  margin-top: 20px;
+  margin-top: 5px;
   margin-bottom: 0;
-  width: 1000px;
   padding:0;
 }
 
+.intro h1{
+  font-weight: 400;
+  font-size: 72px;
+}
+
+.intro h2{
+  font-weight: 400;
+  font-size: 24px;
+}
+
+.intro h3{
+  font-weight: 400;
+  font-size: 20px;
+}
+
+.intro .left{
+  width: 600px
+}
+
+.intro .right{
+  text-align: right;
+  width: 600px
+}
 
 #name{
-  font-size: 72px;
+  font-size: 92px;
   font-family: 'Roboto', monospace;
   font-weight: 700;
+
   color: var(--lightgreen)
+
 }
 
 #dev{
-  font-size: 48px;
   font-family: 'Roboto', monospace;
   font-weight: 700;
-  color: var(--darkergreen);
+
+  color: var(--darkgreen)
+}
+
+
+#multitextBox{
+  margin-top: 25px;
+  overflow: hidden;
+  height: 78px;
+  width: 100%;
+  color: var(--darkgreen);
 }
 
 #multitext{
-  font-size: 68px;
+  font-size: 58px;
   font-family: 'Roboto', monospace;
   font-weight: 700;
-  vertical-align: top;
-
-  color: var(--midgreen);
-  line-height: 100px;
 }
 
+.goingTop{
+  animation: midtotop .33s linear forwards 2s;
+}
+.goingMid{
+  animation: bottomtomid .33s linear forwards;
+
+}
+
+.wait{
+  animation: midtotop .5s linear forwards 10s
+}
+
+@keyframes midtotop {
+  from{
+    translate: 0 0;
+  }
+  to{
+    translate: 0 -100px;
+  }
+}
+
+@keyframes bottomtomid {
+  to{
+    translate: 0 0;
+  }
+  from{
+    translate: 0 100px;
+  }
+}
+
+
+.sidebar{
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+
+  bottom: 0;
+  left: 50px;
+}
+
+.sidebar .icon{
+  width: 25px;
+  height: 25px;
+  padding: 5px;
+  margin: 10px 0;
+  cursor: pointer;;
+
+  filter: invert(.65);
+  transition: all .25s;
+}
+
+.sidebar .icon:hover{
+  scale: 1.2;
+  filter: invert(.85);
+  translate: 0 -5px;
+  transition: all .25s;
+}
+
+.sidebar hr{
+  height: 150px;
+}
+
+.aboutMe{
+  margin-top: 25vh;
+  height: 75vh;
+}

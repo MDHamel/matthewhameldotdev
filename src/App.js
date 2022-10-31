@@ -1,24 +1,25 @@
 import bootText from "./boot.json";
 import './App.css';
 import "./Logo.css";
+import "./nav.css";
+
 import {useState, useEffect} from "react";
+
 
 function App() {
   return (
     <div className="App">
 
-      <section className="bootScreen">
+      {/* <section className="bootScreen">
         <Boot/>
         <LogoStartup />
-      </section>
-
+      </section> */}
+      <Navbar />
       <main>
-        <Logo />
-
         <Intro />
-
+        <AboutMe />
       </main>
-
+      
     </div>
   );
 }
@@ -60,8 +61,6 @@ function Boot(){
     return () => {};
   }, [])
   
-
-
   return(
     <section className='boot'>
         {display}
@@ -69,27 +68,89 @@ function Boot(){
   )
 }
 
+function LinkSideBar(){
+  return(
+    <div className="sidebar">
+      <img className="icon" src="/logo/email.png" />
+      <img className="icon" src="/logo/github.png" />
+      <img className="icon" src="/logo/linkedin.png" />
+      <hr/>
+    </div>
+  )
+}
+
 function Spacing(props){
   return(<div style={{height:props.size, width:"100%"}} />)
+}
+
+function Navbar(){
+  return(
+    <nav>
+      <Logo />
+      <ul>
+        <li>Intro</li>
+        <li>About Me</li>
+        <li>Experience</li>
+        <li>Made by Me</li>
+        <li>Reach Out</li>
+      </ul>
+      
+    </nav>
+  )
 }
 
 function Intro(){
 
   return(
     <section className="intro content">
-      <div>
-        <p > Hello, my name is</p>
-        <h1 id="name">Matthew Hamel</h1>
-        <p >and I am a developer who likes making </p>
-        <h2  id="multitext">Things</h2>
-        
+        <div className="left">
+        <h2>Hello there, my name is </h2>
+        <Spacing size="20px" />
+        <h1 id="name">Matthew</h1>
+        <h1 id="name">Hamel</h1>
+        <h3 id="dev">Tech Enthusiast and Developer</h3>
       </div>
-      <Spacing size="100px"/>
-      
+      <div className="right">
+        <h2>and I am a developer who likes making </h2>
+        <MultiText>Web Apps, Automation Scripts, Android Apps</MultiText>
+      </div> 
     </section>
 
   )
 }
-//<p style={{width:"700px", margin:"auto", textAlign:"left"}}>I am a software engineer who likes to develope projects like web apps, data processing applications, and games. I consider myself a full-stack developer who enjoys working on the front and back end of applications.</p>
+
+function MultiText(props){
+  const items = props.children.split(",");
+  const [anim, setAnim] = useState("wait");
+  const [i, setI] = useState(0);
+
+  const animHandler = () =>{
+    console.log(i)
+    if(anim === "goingMid"){
+      setAnim("goingTop");
+    }else{
+      setI(prev=>prev+1 >= items.length ? 0 : prev+1);
+      setAnim("goingMid");
+      
+    }
+    
+  };
+
+  return(
+    <div id="multitextBox">
+      <h1 id="multitext" className={anim} onAnimationEnd={animHandler}>{items[i]}</h1>
+    </div>
+    
+  )
+}
+
+function AboutMe(){
+  return(
+    <section className="aboutMe">
+      <h1>About Me</h1>
+      <p>adsfasdfdsafasdfads</p>
+    </section>
+  )
+}
       
 export default App;

@@ -1,0 +1,60 @@
+nav{
+    width: 100%;
+    padding: 10px 0;
+   
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    top:0;
+
+    user-select: none;
+    background-color: #111;
+    z-index: 400;
+}
+
+nav ul{
+    text-decoration: none;
+    display: flex;
+    margin-right: 100px;
+}
+
+nav li{
+    list-style: none;
+    font-size: 17px;
+    margin: 0 25px;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: all .1s;
+    font-weight: 600;
+}
+
+nav li:hover{
+    scale:1.1;
+    translate: 0 -3px;
+    color:var(--lightgreen);
+}
+
+.logoBox{
+    scale: 0.085;
+    margin-top: -40px;
+    margin-left: 50px;
+    z-index: 100;
+}
+
+.logoMini{
+    position:absolute;
+    top:0;
+  }
+  
+.logoBox:hover .white{
+animation: glitch 1s linear infinite;
+}
+.logoBox:hover .magenta{
+animation: glitchM 1s linear infinite;
+filter: sepia(1) hue-rotate(-90deg) saturate(100);
+}
+
+.logoBox:hover .cyan{
+animation: glitchC 1s linear infinite;
+filter: sepia(1) hue-rotate(90deg) saturate(100);
+}
