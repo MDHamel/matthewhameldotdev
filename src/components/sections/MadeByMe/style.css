@@ -1,0 +1,94 @@
+
+.projectHolder{
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    
+}
+
+.project{
+    height: 600px;
+    width: 400px;
+
+    border: white 1px solid;
+
+    cursor: pointer;
+    user-select: none;
+    scale: 1;
+    transition: scale .15s;
+}
+
+.project:hover{
+    scale: 1.05;
+}
+
+.project:active{
+    transition: scale .05s;
+    scale: .95;
+}
+
+.project h1{
+    text-align: center;
+    color: white;
+    margin: 10px 0 25px 0;
+}
+
+.project img{
+    width: 100%;
+    max-height: 50%;
+
+    object-fit: cover;
+}
+
+.project aside{
+    position: absolute;
+    word-wrap:normal;
+
+    bottom: 5px;
+    max-width: 400px;
+    height: 35%;
+    overflow-y: hidden;
+}
+
+.project aside:hover{
+    overflow-y: scroll;
+}
+
+.project aside p{
+    padding: 0 15px 5px 15px;
+}
+
+.gitBox{
+    margin-top: 75px;
+    display: flex;
+    align-items: center;
+}
+
+#githubButton{
+    margin: auto;
+
+    color: white;
+    background-color: var(--accent-color);
+
+    font-size: 22px;
+    font-weight: bold;
+    
+    padding: 10px 100px;
+    border-radius: 10px;
+
+    user-select: none;
+    cursor: pointer;
+    transition: all .1s;
+}
+
+#githubButton:hover{
+    filter: brightness(1.1);
+    scale: 1.1;
+}
+
+#githubButton:active{
+    filter: brightness(.85);
+    scale: .95;
+}

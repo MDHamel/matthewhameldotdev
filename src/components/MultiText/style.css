@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+.multitextBox {
+    margin-top: 25px;
+    min-height: calc(var(--size) * 1.22);
+    width: 100%;
+    color: white;
+    
+}
+
+.multitextBox span{
+    position: absolute;
+    font-size: var(--size);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 700;
+
+    --stack-height: calc(100% / var(--stacks) - 1px);
+    --inverse-index: calc(calc(var(--stacks) - 1) - var(--index));
+    --clip-top: calc(var(--stack-height) * var(--index));
+    --clip-bottom: calc(var(--stack-height) * var(--inverse-index));
+    clip-path: inset(var(--clip-top) 0 var(--clip-bottom) 0);
+}
+
+.multitextBox span:nth-child(odd) {
+    --glitch-translate: 20%;
+    --glitch-translate-opp: -20%;
+}
+
+.multitextBox span:nth-child(even) {
+    --glitch-translate: -20%;
+    --glitch-translate-opp: 20%;
+
+}
+
+
+.glitchOut{
+    animation: glitchOut 1s linear forwards 1.5s;
+}
+
+.glitchIn{
+    animation: glitchIn .33s linear backwards;
+
+}
+
+.wait{
+    animation: glitchOut .5s linear forwards var(--delay-time);
+}
+
+.stackWait{
+    --delay: calc((var(--index) * .12s) + var(--delay-time));
+    animation: stack .34s backwards var(--delay), glitchOut .5s linear forwards calc(var(--delay-time) + 1.33s);
+}
+
+/* animation: stack 1s backwards var(--delay) */
+
+@keyframes stack {
+    0% {
+        opacity: 0;
+        transform: translateX(-50%) skew(-50deg);
+        text-shadow: 4px 6px 0 var(--m), 4px -6px 0 var(--c);
+    }
+
+    20% {
+        opacity: 0.5;
+        transform: translateX(50%);
+    }
+
+    70% {
+        opacity: 1;
+        transform: skew(50deg);
+        text-shadow: 4px -6px 0 var(--m), -4px 6px 0 var(--c);
+    }
+
+
+    100% {
+        transform: none;
+        text-shadow: none;
+    }
+}
+
+@keyframes glitchIn{
+
+    2% {
+        opacity: 1;
+        text-shadow: -4px 6px 0 var(--m), 4px -6px 0 var(--c);
+        transform: translate(var(--glitch-translate)) skew(-70deg);
+    }
+
+    70% {
+        text-shadow: -4px 6px 0 var(--m), 4px -6px 0 var(--c);
+        transform: translate(var(--glitch-translate)) skew(70deg);
+    }
+
+    8%{
+        text-shadow: 4px -6px 0 var(--m), -4px 6px 0 var(--c);
+    }
+
+    78%{
+        text-shadow: -4px 6px 0 var(--m), 4px -6px 0 var(--c);
+    }
+
+    82%{
+        text-shadow: -4px 6px 0 var(--m), 4px -6px 0 var(--c);
+        transform: translate(var(--glitch-translate)) skew(70deg);
+    }
+
+    86%{
+        transform: translate(var(--glitch-translate)) skew(-70deg);
+    }
+
+    10%,69%,80%,90%{
+        text-shadow: none; 
+        transform: none; 
+    }
+
+    92%{
+        transform: translate(var(--glitch-translate)) skew(-60deg);
+    }
+    100%{
+        transform: translate(var(--glitch-translate)) skew(85deg);
+    }
+  }
+
+@keyframes glitchOut{
+    0% {
+        opacity: 1;
+        text-shadow: -4px 6px 0 var(--m), 4px -6px 0 var(--c);
+        transform: translate(var(--glitch-translate-opp)) skew(-70deg);
+    }
+
+    70% {
+        text-shadow: -4px 6px 0 var(--m), 4px -6px 0 var(--c);
+        transform: translate(var(--glitch-translate-opp)) skew(70deg);
+    }
+
+    8%{
+        text-shadow: 4px -6px 0 var(--m), -4px 6px 0 var(--c);
+    }
+
+    78%{
+        text-shadow: -4px 6px 0 var(--m), 4px -6px 0 var(--c);
+    }
+
+    82%{
+        text-shadow: -4px 6px 0 var(--m), 4px -6px 0 var(--c);
+        transform: translate(var(--glitch-translate-opp)) skew(70deg);
+    }
+
+    86%{
+        transform: translate(var(--glitch-translate-opp)) skew(-70deg);
+    }
+
+    10%,69%,80%,90%{  
+        text-shadow: none; 
+        transform: none; 
+    }
+
+    92%{
+        transform: translate(var(--glitch-translate-opp)) skew(-60deg);
+    }
+    100%{
+        transform: translate(var(--glitch-translate-opp)) skew(85deg);
+
+    }
+  }
+
+  

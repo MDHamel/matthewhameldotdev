@@ -6,7 +6,7 @@
     height: 100vh;
     background-color: #111;
     z-index: 1000;
-    animation: hideafter .5s linear 5.5s forwards; 
+    animation: hideafter .25s linear 5s forwards; 
   }
   
   .boot{
@@ -28,21 +28,18 @@
 
   
   .logo.white{
-    animation: reveal forwards .25s 1.5s, glitch 1s linear forwards 3.5s;
+    animation: reveal forwards .25s 1.5s, glitchW 1s linear forwards 3.3s;
   }
   
   .logo.magenta{
-    animation: reveal forwards .25s 1.5s, glitchM 1s linear forwards 3.5s;
+    animation: reveal forwards .25s 1.5s, glitchM 1s linear forwards 3.3s;
     filter: sepia(1) hue-rotate(-90deg) saturate(100);
   }
   
   .logo.cyan{
-    animation: reveal forwards .25s 1.5s, glitchC 1s linear forwards 3.5s;
+    animation: reveal forwards .25s 1.5s, glitchC 1s linear forwards 3.3s;
     filter: sepia(1) hue-rotate(90deg) saturate(100);
   }
-  
-
-  
   
   
   @keyframes reveal{
@@ -60,7 +57,7 @@
     }
   }
   
-  @keyframes glitch{
+  @keyframes glitchW{
     0%{
       opacity: 1;
     }
@@ -74,7 +71,7 @@
       transform: translate(0,0) skew(0deg); 
     }
     55%,65%{
-      transform: translate(14px,0) skew(30deg); 
+      transform: translate(14px,0) skew(40deg); 
     }
     90%{
       transform: translate(-32px,0) skew(-60deg); 

@@ -1,22 +1,25 @@
 import bootText from "./boot.json";
 import './App.css';
 import "./Logo.css";
-import "./nav.css";
+import "./components/NavBar/nav.css";
 
 import {useState, useEffect} from "react";
 
+import MultiText from "./components/MultiText/MultiText";
+import { GlitchHover, GlitchText, GlitchTitle } from "./components/GlitchText/GlichText";
 
 function App() {
   return (
     <div className="App">
 
-      {/* <section className="bootScreen">
+      <section className="bootScreen">
         <Boot/>
         <LogoStartup />
-      </section> */}
+      </section> 
       <Navbar />
       <main>
         <Intro />
+        <Spacing size="20vh" />
         <AboutMe />
       </main>
       
@@ -26,7 +29,7 @@ function App() {
 
 function LogoStartup(){
   return(
-    <section className='center'>
+    <section className='middle'>
       <img className='logo magenta' src="/logo.png" />
       <img className='logo cyan' src="/logo.png" />
       <img className='logo white' src="/logo.png" />
@@ -85,14 +88,14 @@ function Spacing(props){
 
 function Navbar(){
   return(
-    <nav>
+    <nav style={{"--delay":"9.75s"}}>
       <Logo />
       <ul>
-        <li>Intro</li>
-        <li>About Me</li>
-        <li>Experience</li>
-        <li>Made by Me</li>
-        <li>Reach Out</li>
+        <GlitchHover><li>Intro</li></GlitchHover>
+        <li><GlitchHover>About Me</GlitchHover></li>
+        <li><GlitchHover>Experience</GlitchHover></li>
+        <li><GlitchHover>Made by Me</GlitchHover></li>
+        <li><GlitchHover>Reach Out</GlitchHover></li>
       </ul>
       
     </nav>
@@ -102,52 +105,30 @@ function Navbar(){
 function Intro(){
 
   return(
+
     <section className="intro content">
-        <div className="left">
-        <h2>Hello there, my name is </h2>
-        <Spacing size="20px" />
-        <h1 id="name">Matthew</h1>
-        <h1 id="name">Hamel</h1>
-        <h3 id="dev">Tech Enthusiast and Developer</h3>
+      <div className="left" style={{"--delay":"5.5s"}}>
+        <h3>Hello there, my name is </h3>
+        <GlitchText size="100px" delay="6.25s">Matthew Hamel</GlitchText>
+        <GlitchText size="24px" delay="7.25s" center = {true} animationOff={true}>Tech Enthusiast and Developer</GlitchText>
       </div>
-      <div className="right">
+
+      <div className="right" style={{"--delay":"8.25s"}}>
+        <Spacing size="50vh" />
         <h2>and I am a developer who likes making </h2>
-        <MultiText>Web Apps, Automation Scripts, Android Apps</MultiText>
+        <MultiText size="72px" animOff={false} delay="9.25s">Web Apps, Automation Scripts, Android Apps</MultiText>
       </div> 
     </section>
 
   )
 }
 
-function MultiText(props){
-  const items = props.children.split(",");
-  const [anim, setAnim] = useState("wait");
-  const [i, setI] = useState(0);
 
-  const animHandler = () =>{
-    console.log(i)
-    if(anim === "goingMid"){
-      setAnim("goingTop");
-    }else{
-      setI(prev=>prev+1 >= items.length ? 0 : prev+1);
-      setAnim("goingMid");
-      
-    }
-    
-  };
-
-  return(
-    <div id="multitextBox">
-      <h1 id="multitext" className={anim} onAnimationEnd={animHandler}>{items[i]}</h1>
-    </div>
-    
-  )
-}
 
 function AboutMe(){
   return(
     <section className="aboutMe">
-      <h1>About Me</h1>
+      <GlitchText size="36px">About Me</GlitchText>
       <p>adsfasdfdsafasdfads</p>
     </section>
   )

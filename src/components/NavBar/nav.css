@@ -1,6 +1,6 @@
 nav{
     width: 100%;
-    padding: 10px 0;
+    padding: 3px 0 3px 0;;
    
     position: fixed;
     display: flex;
@@ -8,8 +8,11 @@ nav{
     top:0;
 
     user-select: none;
-    background-color: #111;
     z-index: 400;
+
+    background-color: var(--background-color);
+
+    animation: downreveal .5s ease var(--delay) backwards;
 }
 
 nav ul{
@@ -20,18 +23,11 @@ nav ul{
 
 nav li{
     list-style: none;
-    font-size: 17px;
     margin: 0 25px;
-    padding: 5px 10px;
+    padding: 3px 10px;
     cursor: pointer;
     transition: all .1s;
     font-weight: 600;
-}
-
-nav li:hover{
-    scale:1.1;
-    translate: 0 -3px;
-    color:var(--lightgreen);
 }
 
 .logoBox{
@@ -47,7 +43,7 @@ nav li:hover{
   }
   
 .logoBox:hover .white{
-animation: glitch 1s linear infinite;
+animation: glitchW 1s linear infinite;
 }
 .logoBox:hover .magenta{
 animation: glitchM 1s linear infinite;
@@ -57,4 +53,16 @@ filter: sepia(1) hue-rotate(-90deg) saturate(100);
 .logoBox:hover .cyan{
 animation: glitchC 1s linear infinite;
 filter: sepia(1) hue-rotate(90deg) saturate(100);
+}
+
+
+@keyframes downreveal {
+    from{
+        translate: 0 -20px;
+        opacity: 0;
+      }
+    
+      to{
+        opacity: 1;
+      }
 }

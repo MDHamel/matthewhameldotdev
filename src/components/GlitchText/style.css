@@ -1,0 +1,152 @@
+
+.stack,.nostack{
+    color: white;
+    position: relative;
+    display: block;
+    min-height: calc(var(--size) * 1.22);
+    font-size: var(--size);  
+}
+
+.glitchLine{
+    position: absolute;
+    margin: 0;
+    font-weight: bold;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+    --stack-height: calc(100% / var(--stacks) - 1px);
+    --inverse-index: calc(calc(var(--stacks) - 1) - var(--index));
+    --clip-top: calc(var(--stack-height) * var(--index));
+    --clip-bottom: calc(var(--stack-height) * var(--inverse-index));
+    clip-path: inset(var(--clip-top) 0 var(--clip-bottom) 0);
+}
+
+.center .glitchLine{
+    margin: 0 calc((var(--width) / 2) * -1);
+}
+
+
+.stack span:not(.glitchHover, .off){
+    --delay: calc((var(--index) * .12s) + var(--delay-time));
+    animation: stack .34s backwards var(--delay), glitch 4s ease infinite calc(var(--delay-time) + 2s);
+}
+
+.stack .off{
+    --delay: calc((var(--index) * .12s) + var(--delay-time));
+    animation: stack .2s backwards var(--delay);
+}
+
+.nostack span:not(.glitchHover, .off){
+    animation: glitch 3s ease infinite 1s;
+}
+
+.stack span:nth-child(odd), .nostack span:nth-child(odd) {
+    --glitch-translate: 20%;
+}
+
+.stack span:nth-child(even), .nostack span:nth-child(even) {
+    --glitch-translate: -20%;
+}
+
+.glitchHover{
+    margin: 0;
+    font-weight: bold;
+    font-size: var(--size);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: white;
+    width: fit-content;
+}
+
+.glitchHover:hover{
+    scale: 1.15;
+    translate: 0 -2px;
+    animation: hoverglitch .75s linear infinite;
+
+    transition: all .2s;
+}
+
+
+
+@keyframes stack {
+    0% {
+        opacity: 0;
+        transform: translateX(-50%) skew(-50deg);
+        text-shadow: 4px 6px 0 var(--m), 4px -6px 0 var(--c);
+    }
+
+    20% {
+        opacity: 0.5;
+        transform: translateX(50%);
+    }
+
+    70% {
+        opacity: 1;
+        transform: skew(50deg);
+        text-shadow: 4px -6px 0 var(--m), -4px 6px 0 var(--c);
+    }
+
+
+    100% {
+        transform: none;
+        text-shadow: none;
+    }
+}
+
+
+@keyframes glitch {
+    0% {
+        opacity: 1;
+        text-shadow: -4px 6px 0 var(--m), 4px -6px 0 var(--c);
+        transform: translate(var(--glitch-translate)) skew(50deg);
+    }
+
+    2%, 
+    52% {
+        text-shadow: 4px -6px 0 var(--m), -4px 6px 0 var(--c);
+    }
+
+    50% {
+        opacity: 1;
+        text-shadow: -4px 6px 0 var(--m), 4px -6px 0 var(--c);
+        transform: translate(calc(var(--glitch-translate)*-1)) skew(-50deg);
+    }
+
+    4%,
+    49%,
+    52%,
+    100% {
+        text-shadow: none;
+        transform: none;
+    }
+}
+
+@keyframes hoverglitch {
+    0% {
+
+        text-shadow: -2px 3px 0 var(--m), 2px -3px 0 var(--c);
+    }
+
+
+    35% {
+
+        text-shadow: -2px -3px 0 var(--m), 2px 3px 0 var(--c);
+    }
+
+    55% {
+
+        text-shadow: 2px -3px 0 var(--m), -2px 3px 0 var(--c);
+    }
+
+    45% {
+
+        text-shadow: 2px 3px 0 var(--m), -2px -3px 0 var(--c);
+    }
+
+    20%,
+    70%,
+    100%
+    {
+        
+        text-shadow: none;
+        transform: none;
+    }
+}

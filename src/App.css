@@ -5,9 +5,11 @@
   display: flex;
   color: white;
   align-items: center;
+
+  
 }
 
-.center{
+.middle{
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -16,8 +18,9 @@
 }
 
 main{
-  width: 1200px;
+  width: 1400px;
   margin: auto;
+  
 }
 
 .content{
@@ -30,12 +33,11 @@ main{
   display: flex;
   justify-content:space-between;
   align-items: center;
-  height: 100vh;
+  height: 80vh;
 }
 
 .intro p,h1,h2,span{
-  margin-top: 5px;
-  margin-bottom: 0;
+  margin: 0;
   padding:0;
 }
 
@@ -52,76 +54,22 @@ main{
 .intro h3{
   font-weight: 400;
   font-size: 20px;
+  margin-top: 0;
 }
 
 .intro .left{
-  width: 600px
+  width: 50%;
+  animation: upreveal .25s backwards var(--delay);
 }
 
 .intro .right{
-  text-align: right;
-  width: 600px
+  margin-right: -7.5%;
+  width: 50%;
+  animation: upreveal .25s backwards var(--delay);
 }
 
-#name{
-  font-size: 92px;
-  font-family: 'Roboto', monospace;
-  font-weight: 700;
-
-  color: var(--lightgreen)
-
-}
-
-#dev{
-  font-family: 'Roboto', monospace;
-  font-weight: 700;
-
-  color: var(--darkgreen)
-}
-
-
-#multitextBox{
-  margin-top: 25px;
-  overflow: hidden;
-  height: 78px;
-  width: 100%;
-  color: var(--darkgreen);
-}
-
-#multitext{
-  font-size: 58px;
-  font-family: 'Roboto', monospace;
-  font-weight: 700;
-}
-
-.goingTop{
-  animation: midtotop .33s linear forwards 2s;
-}
-.goingMid{
-  animation: bottomtomid .33s linear forwards;
-
-}
-
-.wait{
-  animation: midtotop .5s linear forwards 10s
-}
-
-@keyframes midtotop {
-  from{
-    translate: 0 0;
-  }
-  to{
-    translate: 0 -100px;
-  }
-}
-
-@keyframes bottomtomid {
-  to{
-    translate: 0 0;
-  }
-  from{
-    translate: 0 100px;
-  }
+.intro .multitextBox{
+  margin-left: 10%;
 }
 
 
@@ -159,4 +107,15 @@ main{
 .aboutMe{
   margin-top: 25vh;
   height: 75vh;
+}
+
+@keyframes upreveal{
+  from{
+    translate: 0 20px;
+    opacity: 0;
+  }
+
+  to{
+    opacity: 1;
+  }
 }

@@ -1,5 +1,8 @@
 :root{
-    --lightgreen: rgb(77, 243, 152);
-    --midgreen: rgb(49, 236, 121);
-    --darkgreen: rgb(59, 218, 120);
+    --background-color: #252629;
+    --font-color: white;
+    --accent-color: rgb(83, 140, 245);
+
+    --c: cyan;
+    --m: magenta;
 }
