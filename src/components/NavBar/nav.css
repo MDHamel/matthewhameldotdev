@@ -6,11 +6,13 @@ nav{
     display: flex;
     justify-content: space-between;
     top:0;
+    left:0;
 
     user-select: none;
     z-index: 400;
 
-    background-color: var(--background-color);
+    background-color: var(--nav-color);
+    backdrop-filter: blur(9px);
 
     animation: downreveal .5s ease var(--delay) backwards;
 }

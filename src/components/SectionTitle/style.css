@@ -1,0 +1,10 @@
+
+.titleSection{
+    display: flex;
+}
+
+.bar{
+    background-color: var(--w);
+    height: 2px;
+    width: 500px;
+}
