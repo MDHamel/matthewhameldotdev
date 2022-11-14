@@ -1,10 +1,16 @@
 
 .titleSection{
     display: flex;
+    justify-content: space-evenly;
+    width: 75%;
+    margin: auto;
 }
 
 .bar{
     background-color: var(--w);
     height: 2px;
-    width: 500px;
+    margin: auto;
+    min-width: 30%;
+    width: auto;
+    max-width: 60%;
 }

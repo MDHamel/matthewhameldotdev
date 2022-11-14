@@ -67,4 +67,10 @@ export function GlitchHover(props){
     )
 }
     
-    
+export function Button(props){
+    const text = props.children;
+    const width = props.width?props.width:"200px";
+    return(
+        <span className="button glitchHover" onClick={props.onClick} style={{"--width":width}}>{text}</span>
+    )
+}

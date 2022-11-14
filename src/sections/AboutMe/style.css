@@ -1,69 +1,39 @@
 
 .AboutMe{
-    
+    min-height: 450px;
 }
 
 .AboutMe article{
-    
     text-align: justify;
-    font-size: 22px;
-    width: 1200px;
-    margin: 50px auto;
+    width: 72%;
+    margin: auto;
+    word-wrap: break-word;
+}
 
+.AboutMe span{
+    font-weight: bolder;
+    
+    cursor: pointer;
+    text-decoration: underline;
 }
 
 
-.meImage{
+
+.meImage {
     position:relative;
     float: right;
-    width: 350px;
-    height: 350px;
-    padding: 0 100px;
-    left: 100px;
-    top: 25px;
+    width: 300px;
+    min-height: 300px;
+    margin: -7px 0 auto 150px;
+    filter: grayscale(.4);
+
+    transition: all .25s, box-shadow .4s;
     
 }
 
-.meImage img{
-    position: absolute;
-    width: 350px;
-    height: 350px;
-    margin: 0;
-    filter: grayscale(.4);
-
-    transition: all .25s;
-}
-
-
-.meImage .back{
-    position: absolute;
-    width: 350px;
-    height: 350px;
-    margin: 0;
-    opacity: .75;
-    transition: all .25s;
-}
-
-.meImage .back.m{
-    background-color: var(--m);
-}
-.meImage .back.c{
-    background-color: var(--c);
-}
-
-.meImage:hover img{
+.meImage:hover{
     filter: grayscale(0);
-    scale: 1.05;
+    scale: 1.1;
+    box-shadow: 15px 15px var(--m), -15px -15px var(--c);
 }
 
-.meImage:hover .back{
-    scale: 1.05;
-}
-
-.meImage:hover .back.m{
-    translate: 15px 15px;
-}
-
-.meImage:hover .back.c{
-    translate: -15px -15px;
-}

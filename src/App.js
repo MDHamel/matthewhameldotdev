@@ -1,41 +1,29 @@
 
 import './App.css';
 
-import {useState, useEffect} from "react";
-
-import MultiText from "./components/MultiText/MultiText";
-import { GlitchHover, GlitchText, GlitchTitle } from "./components/GlitchText/GlichText";
 import Navbar from "./components/NavBar/NavBar";
 import StartUp from "./sections/Boot/Boot";
 import Intro from './sections/Intro/Intro';
+import AboutMe from './sections/AboutMe/AboutMe';
+import Experience from './sections/Experience/Experience';
+import MadeByMe from './sections/MadeByMe/MadeByMe';
+import ReachOut from './sections/ReachOut/ReachOut';
 
 function App() {
   return (
     <div className="App">
-            <StartUp />
-            <main>
-                <Navbar />
-                <Intro />
-            </main>
-        </div>
+        <StartUp />
+        <main>
+            <Navbar />
+            <Intro />
+            <AboutMe />
+            <Experience />
+            <MadeByMe />
+            <ReachOut />
+        </main>
+    </div>
   );
 }
-
-
-
-function LinkSideBar(){
-  return(
-    <div className="sidebar">
-      <img className="icon" src="/logo/email.png" />
-      <img className="icon" src="/logo/github.png" />
-      <img className="icon" src="/logo/linkedin.png" />
-      <hr/>
-    </div>
-  )
-}
-
-
-
 
       
 export default App;

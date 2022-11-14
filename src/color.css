@@ -1,10 +1,11 @@
 :root{
     --background-color: #252629;
-    --nav-color: #252629af;
+    --background-color-light:#474a50;
+    --nav-color: #252629c2;
 
     --font-color: white;
 
-    --w: white;
-    --c: cyan;
-    --m: magenta;
+    --w: rgb(255,255,255);
+    --c: rgb(0,255,255);
+    --m: rgb(255,0,255);
 }

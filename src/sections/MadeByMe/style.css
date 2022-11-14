@@ -1,6 +1,7 @@
 
 .projectHolder{
-    width: 100%;
+    width: 88%;
+    margin: auto;
     position: relative;
     display: flex;
     justify-content:space-between;
@@ -9,19 +10,31 @@
 }
 
 .project{
-    height: 600px;
-    width: 400px;
+    height: 575px;
+    width: 28%;
 
     border: white 1px solid;
 
     cursor: pointer;
     user-select: none;
     scale: 1;
-    transition: scale .15s;
+    transition: scale .15s, box-shadow .5s;
 }
 
 .project:hover{
     scale: 1.05;
+}
+
+.project:hover:nth-child(1){
+    box-shadow: 10px 10px var(--m), -10px -10px var(--c);
+}
+
+.project:hover:nth-child(2){
+    box-shadow: 10px -10px var(--m), -10px 10px var(--c);
+}
+
+.project:hover:nth-child(3){
+    box-shadow: -10px -10px var(--m), 10px 10px var(--c);
 }
 
 .project:active{
@@ -54,41 +67,15 @@
 
 .project aside:hover{
     overflow-y: scroll;
+    
 }
 
 .project aside p{
     padding: 0 15px 5px 15px;
 }
 
-.gitBox{
-    margin-top: 75px;
+.MadeByMe .button{
+    margin: 75px auto;
     display: flex;
     align-items: center;
-}
-
-#githubButton{
-    margin: auto;
-
-    color: white;
-    background-color: var(--accent-color);
-
-    font-size: 22px;
-    font-weight: bold;
-    
-    padding: 10px 100px;
-    border-radius: 10px;
-
-    user-select: none;
-    cursor: pointer;
-    transition: all .1s;
-}
-
-#githubButton:hover{
-    filter: brightness(1.1);
-    scale: 1.1;
-}
-
-#githubButton:active{
-    filter: brightness(.85);
-    scale: .95;
 }

@@ -1,4 +1,5 @@
 import { GlitchText } from "../../components/GlitchText/GlichText";
+import { Spacing } from "../../components/Misc/misc";
 import MultiText from "../../components/MultiText/MultiText";
 import "./style.css";
 
@@ -6,7 +7,7 @@ export default function Intro() {
 
     return (
 
-        <section className="intro content">
+        <section className="Intro content">
             <div className="left" style={{ "--delay": "5.5s" }}>
                 <h3>Hello there, my name is </h3>
                 <GlitchText size="100px" delay="6.25s">Matthew Hamel</GlitchText>
@@ -23,6 +24,3 @@ export default function Intro() {
     )
 }
 
-function Spacing(props) {
-    return (<div style={{ height: props.size, width: "100%" }} />)
-}

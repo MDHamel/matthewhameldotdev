@@ -1,4 +1,7 @@
 import {useState} from "react";
+import { Button } from "../../components/GlitchText/GlichText";
+
+import SectionTitle from "../../components/SectionTitle/SectionTitle";
 import "./style.css"
 
 export default function MadeByMe(){
@@ -12,13 +15,14 @@ export default function MadeByMe(){
     }
 
     return(
-        <section className="MadeByMe">
+        <section className="MadeByMe content">
+            <SectionTitle>Made by Me</SectionTitle>
             <div className="projectHolder">
                 <Project data={testdata} />
                 <Project data={testdata} />
                 <Project data={testdata} />
             </div>
-            <aside className="gitBox"><span id="githubButton">Find other projects on my GitHub</span></aside>
+            <Button onClick={()=>{}} width="600px">Find other projects on my GitHub</Button>
         </section>
         
     )

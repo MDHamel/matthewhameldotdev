@@ -1,42 +1,18 @@
 .ReachOut{
     text-align: center;
-    color: white;
-    font-size: 20px;
-    font-weight: 600;
+    margin-bottom: 40vh;
+
+}
+
+.ReachOut p{
+    margin: 75px 0;
+    line-height: 150%;
 }
 
 .buttonBox{
     margin: 50px auto 0 auto;
     display: flex;
     justify-content:space-evenly;
-
     width:50%;
 }
 
-.ReachOut .button{
-    width: 200px;
-    padding: 10px 0;
-
-    font-size: 20px;
-    font-weight: bold;
-    
-    cursor: pointer;
-    user-select: none;
-
-    background-color: var(--accent-color);
-    color: white;
-    border: 2px white solid;
-    border-radius: 10px;
-
-    transition: all .1s;
-}
-
-.ReachOut .button:hover{
-    scale:1.1;
-    filter: brightness(1.05)
-}
-
-.ReachOut .button:active{
-    scale: .95;
-    filter: brightness(.95)
-}

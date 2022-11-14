@@ -3,19 +3,28 @@ import "./nav.css";
 
 
 export default function Navbar(){
-    return(
-      <nav style={{"--delay":"9.75s"}}>
-        <Logo />
-        <ul>
-          <li><GlitchHover>Intro</GlitchHover></li>
-          <li><GlitchHover>About Me</GlitchHover></li>
-          <li><GlitchHover>Experience</GlitchHover></li>
-          <li><GlitchHover>Made by Me</GlitchHover></li>
-          <li><GlitchHover>Reach Out</GlitchHover></li>
-        </ul>
-        
-      </nav>
-    )
+
+  const navItems = ["Intro", "About Me", "Experience", "Made By Me", "Reach Out"]
+  const scrollTo = (section) =>{
+    const element = document.getElementsByClassName(section.replace(/ /g, ''));
+    console.log(element[0].offsetTop - 60);
+    window.scrollTo({
+      top: element[0].offsetTop - 60,
+      behavior: 'smooth'
+    });
+  }
+
+  
+
+  return(
+    <nav style={{"--delay":"9.75s"}}>
+      <Logo />
+      <ul>
+        {navItems.map((item, index)=>{return <li onClick={()=>{scrollTo(item)}} key={index}><GlitchHover>{item}</GlitchHover></li>})}
+      </ul>
+      
+    </nav>
+  )
   }
 
   function Logo(){

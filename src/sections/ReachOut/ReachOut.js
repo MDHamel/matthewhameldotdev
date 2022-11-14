@@ -1,4 +1,4 @@
-import { GlitchText } from "../../components/GlitchText/GlichText";
+import { Button, GlitchText } from "../../components/GlitchText/GlichText";
 import "./style.css"
 
 export default function ReachOut(){
@@ -13,10 +13,9 @@ export default function ReachOut(){
             </div>
             <p>I am currently looking for new opportunities.<br />Feel free to drop me an email with any questions, and I will get back to you as soon as possible.<br />Thank you for your time!</p>
             <aside className="buttonBox">
-                <span className="button" onClick={email}>Send an Email</span>
-                <span className="button" onClick={openResume}>View Resume</span>
+                <Button onClick={email}>Send an Email</Button>
+                <Button onClick={openResume}>View Resume</Button>
             </aside>
         </section>
     )
 }
-
