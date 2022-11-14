@@ -7,9 +7,10 @@ export default function Navbar(){
   const navItems = ["Intro", "About Me", "Experience", "Made By Me", "Reach Out"]
   const scrollTo = (section) =>{
     const element = document.getElementsByClassName(section.replace(/ /g, ''));
-    console.log(element[0].offsetTop - 60);
+    console.log(section, element[0].offsetTop);
+    console.log(element)
     window.scrollTo({
-      top: element[0].offsetTop - 60,
+      top: element[0].offsetTop - (60 * (1+(1/element[0].offsetHeight))),
       behavior: 'smooth'
     });
   }
