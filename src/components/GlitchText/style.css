@@ -19,8 +19,8 @@
     --stack-height: calc(100% / var(--stacks) - 1px);
     --inverse-index: calc(calc(var(--stacks) - 1) - var(--index));
     --clip-top: calc(var(--stack-height) * var(--index));
-    --clip-bottom: calc(var(--stack-height) * var(--inverse-index));
-    clip-path: inset(var(--clip-top) 0 var(--clip-bottom) 0);
+    --clip-bot: calc(var(--stack-height) * var(--inverse-index));
+    clip-path: inset(var(--clip-top) 0 var(--clip-bot) 0);
 }
 
 .stack.center, .nostack.center{
@@ -33,7 +33,7 @@
 
 .stack span:not(.glitchHover, .off){
     --delay: calc((var(--index) * .12s) + var(--delay-time));
-    animation: stack .34s backwards var(--delay), glitch 4s ease infinite calc(var(--delay-time) + 2s);
+    animation: stack .34s backwards var(--delay), glitch 5s ease infinite calc(var(--delay-time) + 2s);
 }
 
 .stack .off{
@@ -42,7 +42,7 @@
 }
 
 .nostack span:not(.glitchHover, .off){
-    animation: glitch 3s ease infinite 1s;
+    animation: glitch 5s ease infinite 1s;
 }
 
 .stack span:nth-child(odd), .nostack span:nth-child(odd) {
@@ -65,7 +65,7 @@
 .glitchHover:hover{
     scale: 1.15;
     translate: 0 -2px;
-    animation: hoverglitch .75s linear infinite;
+    animation: hoverglitch .9s linear infinite;
 
     transition: all .2s;
 }
@@ -148,9 +148,9 @@
         transform: translate(calc(var(--glitch-translate)*-1)) skew(-50deg);
     }
 
-    4%,
+    6%,
     49%,
-    52%,
+    56%,
     100% {
         text-shadow: none;
         transform: none;

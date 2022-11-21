@@ -1,6 +1,7 @@
 import "./Logo.css"
 import {useState, useEffect} from "react";
 import bootText from "./boot.json";
+import { pubUrl } from "../../components/Misc/misc";
 
 function Boot() {
     const [inc, setInc] = useState(1);
@@ -29,9 +30,9 @@ function Boot() {
 function LogoStartup() {
     return (
         <section className='middle'>
-            <img className='logo magenta' src="/logo.png" />
-            <img className='logo cyan' src="/logo.png" />
-            <img className='logo white' src="/logo.png" />
+            <img className='logo magenta' src={pubUrl("/logo.png")} />
+            <img className='logo cyan' src={pubUrl("/logo.png")} />
+            <img className='logo white' src={pubUrl("/logo.png")} />
         </section>
     );
 }

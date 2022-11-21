@@ -59,6 +59,7 @@ aside li{
 
 .flexbox aside{
     width: 85%;
+    text-align: justify;
     padding: 10px 50px;
     margin-left: 25px;
     min-height: 100%;
