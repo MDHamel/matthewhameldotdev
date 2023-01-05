@@ -62,19 +62,19 @@
       opacity: 1;
     }
     2%,70%{
-      transform: translate(20px,0) skew(15deg);
+      transform: translate(10%,0) skew(15deg);
     }
     12%,60%{
-      transform: translate(-20px,0) skew(0deg);
+      transform: translate(-10%,0) skew(0deg);
     }
     50%{
       transform: translate(0,0) skew(0deg); 
     }
     55%,65%{
-      transform: translate(14px,0) skew(40deg); 
+      transform: translate(4%,0) skew(40deg); 
     }
     90%{
-      transform: translate(-32px,0) skew(-60deg); 
+      transform: translate(-10%,0) skew(-60deg); 
     }
     95%{
       transform: translate(0px,0) skew(75deg);
@@ -90,20 +90,20 @@
       opacity: 1;
     }
     2%,70%{
-      transform: translate(35px,0) skew(10deg);
+      transform: translate(13%,0) skew(10deg);
     }
     12%,60%{
-      transform: translate(-35px,0) skew(-6deg);
+      transform: translate(-13%,0) skew(-6deg);
     }
     50%{
       transform: translate(0,0) skew(5deg); 
     }
     55%,65%{
-      transform: translate(10px,0) skew(15deg); 
+      transform: translate(8%,0) skew(15deg); 
     }
 
     90%{
-      transform: translate(-32px,0) skew(-50deg); 
+      transform: translate(-13%,0) skew(-50deg); 
     }
     95%{
       transform: translate(0px,0) skew(72deg);
@@ -119,19 +119,19 @@
       opacity: 1;
     }
     2%,70%{
-      transform: translate(30px,0) skew(20deg);
+      transform: translate(7%,0) skew(20deg);
     }
     12%,60%{
-      transform: translate(-40px,0) skew(-2deg);
+      transform: translate(-7%,0) skew(-2deg);
     }
     50%{
       transform: translate(0,0) skew(-2deg); 
     }
     55%,65%{
-      transform: translate(12px,0) skew(30deg); 
+      transform: translate(4%,0) skew(30deg); 
     }
     90%{
-      transform: translate(-48px,0) skew(-70deg); 
+      transform: translate(-7%,0) skew(-70deg); 
     }
     95%{
       transform: translate(0px,0) skew(82deg);

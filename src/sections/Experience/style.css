@@ -42,6 +42,7 @@
 
 aside li{
     margin: 10px;
+    list-style:square;
 }
 
 .flexbox #selected{
@@ -54,12 +55,11 @@ aside li{
 
     --intro-time: .45s;
 
-    animation: bordering var(--intro-time) ease forwards, shadowglitch 1.5s linear calc(var(--intro-time) + .05s) infinite reverse;    
+    animation: bordering var(--intro-time) ease forwards, shadowglitch 1.5s linear calc(var(--intro-time) + .05s) infinite;    
 }
 
 .flexbox aside{
     width: 85%;
-    text-align: justify;
     padding: 10px 50px;
     margin-left: 25px;
     min-height: 100%;
@@ -69,6 +69,7 @@ aside li{
     box-sizing: border-box;
     -moz-box-sizing: border-box;
 
+    overflow-y: scroll;
 }
 
 
@@ -87,7 +88,7 @@ aside li{
 }
 
 @keyframes shadowglitch{
-    0%, 21%, 25%, 44%, 50%, 69%, 75%, 94%, 100%{
+    0%, 21%, 38%, 44%, 65%, 69%, 88%, 100%{
         box-shadow: -2px -1px 0px 1px var(--m), 1px 2px 0px 1px var(--c);
     }
 
@@ -105,7 +106,7 @@ aside li{
 
     }
 
-    95%{
+    90%{
         box-shadow: -2px -1px 0px 1px var(--m), 6px 4px 0px 1px var(--c);
     }
 }

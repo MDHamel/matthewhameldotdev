@@ -3,7 +3,7 @@
 }
 
 .AboutMe article{
-    text-align: justify;
+    text-align: left;
     width: 72%;
     margin: auto;
     word-wrap: break-word;
@@ -26,8 +26,9 @@
 .meImage {
     position:relative;
     float: right;
-    width: 300px;
-    min-height: 300px;
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
     margin: -7px 0 auto 150px;
     filter: grayscale(.4);
 

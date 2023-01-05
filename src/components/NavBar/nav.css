@@ -12,7 +12,7 @@ nav{
     z-index: 400;
 
     background-color: var(--nav-color);
-    backdrop-filter: blur(9px);
+    backdrop-filter: blur(12px);
 
     animation: downreveal .5s ease var(--delay) backwards;
 }
@@ -33,10 +33,11 @@ nav li{
 }
 
 .logoBox{
-    scale: 0.085;
+    scale: 0.095;
     margin-top: -40px;
     margin-left: 50px;
     z-index: 100;
+    cursor: pointer;
 }
 
 .logoMini{
@@ -45,15 +46,15 @@ nav li{
   }
   
 .logoBox:hover .white{
-animation: glitchW 1s linear infinite;
+animation: glitchW 1s linear infinite alternate;
 }
 .logoBox:hover .magenta{
-animation: glitchM 1s linear infinite;
+animation: glitchM 1s linear infinite alternate;
 filter: sepia(1) hue-rotate(-90deg) saturate(100);
 }
 
 .logoBox:hover .cyan{
-animation: glitchC 1s linear infinite;
+animation: glitchC 1s linear infinite alternate;
 filter: sepia(1) hue-rotate(90deg) saturate(100);
 }
 

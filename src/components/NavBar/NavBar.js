@@ -32,7 +32,7 @@ export default function Navbar(){
   function Logo(){
     console.log(process.env.PUBLIC_URL)
     return(
-      <div className="logoBox">
+      <div className="logoBox" onClick={()=>{window.location.reload()}}>
         <img className='logoMini magenta' src={pubUrl("/logo.png")} />
         <img className='logoMini cyan' src={pubUrl("/logo.png")} />
         <img className='logoMini white' src={pubUrl("/logo.png")} />
