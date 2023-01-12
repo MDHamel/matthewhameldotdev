@@ -17,7 +17,7 @@ export default function Intro() {
             <div className="right" style={{ "--delay": "8.25s" }}>
                 <Spacing size="50vh" />
                 <h2>and I am a developer who likes making </h2>
-                <MultiText size="72px" animOff={false} delay="9.25s">Web Apps, Automation Scripts, Android Apps</MultiText>
+                <MultiText size="72px" animOff={false} delay="9.25s">Web Apps, Automation Scripts, Android Apps, User Interfaces, Websites, Unity Games</MultiText>
             </div>
         </section>
 

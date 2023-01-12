@@ -10,10 +10,10 @@
 }
 
 .project{
-    height: 575px;
+    height: 600px;
     width: 28%;
 
-    border: white 1px solid;
+    border: white 3px solid;
 
     cursor: pointer;
     user-select: none;
@@ -37,11 +37,6 @@
     box-shadow: -10px -10px var(--m), 10px 10px var(--c);
 }
 
-.project:active{
-    transition: scale .05s;
-    scale: .95;
-}
-
 .project h1{
     text-align: center;
     color: white;
@@ -58,10 +53,11 @@
 .project aside{
     position: absolute;
     word-wrap:normal;
-    
+    padding-bottom: 20px;
+    box-sizing: border-box;
     line-height: 22px;
     font-size: 18px;
-    bottom: 5px;
+    padding-top: 15px;
     max-width: 400px;
     height: 35%;
     overflow-y: hidden;
@@ -76,8 +72,20 @@
     padding: 0 15px 5px 15px;
 }
 
+.project aside span{
+    border: white 2px solid;
+    padding: 5px 10px;
+}
+
+.project aside .center{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    
+}
+
 .MadeByMe .button{
-    margin: 90px auto;
+    margin: 60px auto;
     display: flex;
     align-items: center;
 }

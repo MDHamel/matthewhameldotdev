@@ -3,8 +3,8 @@ import "./style.css"
 
 export default function ReachOut(){
     //---------------------------------------------------------------------------------UPDATE EMAIL----------------------------------------------------------------------------------------------------------------------------
-    const openResume = () => {  window.open('/test.pdf');   };
-    const email = () =>{    document.location.href= 'mailto:test@example.com'; };
+    const openResume = () => {  window.open('/Hamel-Resume-Jan-2023.pdf');   };
+    const email = () =>{    document.location.href= 'mailto:matt@matthewhamel.dev'; };
 
     return(
         <section className="ReachOut content">
