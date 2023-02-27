@@ -89,3 +89,70 @@
     display: flex;
     align-items: center;
 }
+
+
+/* Phones ----------- */
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 480px) {
+    .projectHolder{
+        flex-direction: column;
+    }
+
+    .project{
+        width: 100%;
+    
+        border: white 3px solid;
+    
+        cursor: pointer;
+        user-select: none;
+
+        margin-bottom: 20px;
+    }
+
+    .project aside{
+        max-width: 95%;
+        margin: 10px 2.5%;
+        overflow: scroll;
+    }
+
+    .button{
+        width: 75vw;
+        padding: 5%;
+        font-size: 20px;
+    }
+
+}
+
+/* Tablet (portrait) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : portrait) {
+    .projectHolder{
+        flex-direction: column;
+    }
+
+    .project{
+        height: 600px;
+        width: 100%;
+    
+        border: white 3px solid;
+    
+        cursor: pointer;
+        user-select: none;
+
+        margin-bottom: 20px;
+    }
+
+    .project aside{
+        max-width: 95%;
+        margin: 0 2.5%;
+    }
+
+    .button{
+        width: 65vw;
+        padding: 2% 5%;
+        
+    }
+}

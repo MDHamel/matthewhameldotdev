@@ -5,7 +5,7 @@
   display: flex;
   color: white;
   align-items: center;
-
+  width: 100vw;
   
 }
 
@@ -20,7 +20,6 @@
 main{
   width: 1400px;
   margin: auto;
-  
 }
 
 .content{
@@ -28,11 +27,76 @@ main{
   font-size: 18px;
   font-family:  Arial, Helvetica, sans-serif;
 
+  max-width: 100%;
+  padding: 0 5%;
+
+  box-sizing: border-box;
+
   margin-bottom: 30vh;
+}
+
+/* Phones ----------- */
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 480px) {
+  .content{
+    margin-bottom: 20vh;
+    padding: 0 2%;
+
+  }
+
+  main{
+    box-sizing: border-box;
+    width: 100vw;
+    padding: 0;
+  }
+}
+/* Tablet (landscape) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : landscape) {
+  .content{
+    margin-bottom: 20vh;
+  }
+
+  main{
+    box-sizing: border-box;
+    width: 100vw;
+    padding: 0 5px;
+  }
+}
+
+/* Tablet (portrait) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : portrait) {
+  .content{
+    margin-bottom: 20vh;
+  }
+
+  main{
+    box-sizing: border-box;
+    width: 100vw;
+    padding: 0 25px;
+  }
 }
 
 p{
   line-height: 25px;
 }
+
+
+/* phone */
+@media screen and (max-width:599px) {
+
+}
+
+/* tablet */
+@media screen and (max-width:979px) {
+
+}
+
 
 

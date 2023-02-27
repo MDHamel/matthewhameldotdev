@@ -4,8 +4,7 @@
 
 .AboutMe article{
     text-align: left;
-    width: 72%;
-    margin: auto;
+    width: 40%;
     word-wrap: break-word;
 }
 
@@ -21,15 +20,18 @@
     color: var(--m);
 }
 
-
+.AboutMe .flex{
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+}
 
 .meImage {
-    position:relative;
-    float: right;
+    position: relative;
     width: 350px;
     height: 350px;
     object-fit: cover;
-    margin: -7px 0 auto 150px;
+    object-position: 0px -18px;
     filter: grayscale(.4);
 
     transition: all .25s, box-shadow .4s;
@@ -42,3 +44,56 @@
     box-shadow: 15px 15px var(--m), -15px -15px var(--c);
 }
 
+/* Phones ----------- */
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 480px) {
+
+    .AboutMe .flex{
+        flex-direction: column;
+        margin: auto;
+    }
+
+    .AboutMe article{
+        width: 95vw;
+        position: relative;
+        padding: 0 5%;
+        box-sizing: border-box;
+    }
+
+    .meImage{
+        width: 75vw;
+        height: 75vw;
+        margin: 50px auto 0 auto;
+
+
+        filter: grayscale(0);
+        box-shadow: 10px 10px var(--m), -10px -10px var(--c);
+
+    }
+}
+
+/* Tablet (portrait) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : portrait) {
+    .AboutMe .flex{
+        flex-direction: column;
+        margin: auto;
+    }
+
+    .AboutMe article{
+        width: 85vw;
+        position: relative;
+        padding: 2.5vw;
+        box-sizing: border-box;
+    }
+
+    .meImage{
+        
+        margin: 50px auto 0 auto;
+        filter: grayscale(0);
+        box-shadow: 10px 10px var(--m), -15px -10px var(--c);
+    }
+}

@@ -41,7 +41,7 @@ export default function MadeByMe() {
                 <Project data={ramblerumble} />
                 <Project data={gallery} />
             </div>
-            <Button onClick={() => { window.open("https://GitHub.com/MDHamel", '_blank') }} width="600px">Find other projects on my GitHub</Button>
+            <Button onClick={() => { window.open("https://GitHub.com/MDHamel", '_blank') }} width="40vw">Find other projects on my GitHub</Button>
         </section>
 
     )
@@ -58,8 +58,8 @@ function Project(props) {
             <img src={src} />
             <aside>
                 <div className="center">
-                    <span className="glitchHover" style={{ fontSize: "20px" }} onClick={() => { openLink(props.data.GitHub) }} >GitHub Code</span>
-                    <span className="glitchHover" style={{ fontSize: "20px" }} onClick={() => { openLink(props.data.link) }} >Link to Project</span>
+                    <span className="glitchHover xsmall" onClick={() => { openLink(props.data.GitHub) }} >GitHub Code</span>
+                    <span className="glitchHover xsmall" onClick={() => { openLink(props.data.link) }} >Link to Project</span>
                 </div>
                 <p>{props.data.desc}</p>
 

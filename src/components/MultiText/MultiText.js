@@ -23,7 +23,7 @@ export default function MultiText(props){
     };
   
     return(
-      <div className="multitextBox" style={{"--stacks": 3, "--size":size, "--delay-time":delay}}>
+      <div className="multitextBox large" style={{"--stacks": 3, "--delay-time":delay}}>
         <span style={{"--index": 0}} className={anim} onAnimationEnd={animHandler}>{items[i]}</span>
         <span style={{"--index": 1}} className={anim} onAnimationEnd={animHandler}>{items[i]}</span>
         <span style={{"--index": 2}} className={anim} onAnimationEnd={animHandler}>{items[i]}</span>

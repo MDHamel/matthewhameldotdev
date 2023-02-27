@@ -1,6 +1,7 @@
 nav{
-    width: 100%;
-    padding: 3px 0 3px 0;;
+    width: 100vw;
+    padding: 3px 0 3px 0;
+    height: 10vh;
    
     position: fixed;
     display: flex;
@@ -18,15 +19,18 @@ nav{
 }
 
 nav ul{
+    position: absolute;
+    right: 5%;
+    margin: 2vh auto;
     text-decoration: none;
     display: flex;
-    margin-right: 100px;
 }
 
 nav li{
     list-style: none;
-    margin: 0 25px;
-    padding: 3px 10px;
+    margin: 1vh 1.5vw;
+    padding: 1vh 10px;
+    width: fit-content;
     cursor: pointer;
     transition: all .1s;
     font-weight: 600;
@@ -34,7 +38,7 @@ nav li{
 
 .logoBox{
     scale: 0.095;
-    margin-top: -40px;
+
     margin-left: 50px;
     z-index: 100;
     cursor: pointer;
@@ -42,7 +46,9 @@ nav li{
 
 .logoMini{
     position:absolute;
-    top:0;
+    top:0%;
+    bottom: 0%;
+    margin: auto;
   }
   
 .logoBox:hover .white{
@@ -57,6 +63,26 @@ filter: sepia(1) hue-rotate(-90deg) saturate(100);
 animation: glitchC 1s linear infinite alternate;
 filter: sepia(1) hue-rotate(90deg) saturate(100);
 }
+
+/* Phones ----------- */
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 480px) {
+    nav{
+        visibility: hidden;
+    }
+}
+
+/* Tablet (portrait) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : portrait) {
+
+    
+}
+
+
 
 
 @keyframes downreveal {

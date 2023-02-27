@@ -3,15 +3,12 @@
     color: var(--font-color);
 
     height: 420px;
-    width: 65%;
-    padding:0 20px;
+    width: 75%;
     margin: auto;
 
 
     box-sizing: border-box;
     -moz-box-sizing: border-box;
-
-    
 }
 
 .menu{
@@ -71,6 +68,55 @@ aside li{
 
     overflow-y: scroll;
 }
+
+/* Phones ----------- */
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 480px) {
+
+    .flexbox{
+        margin: 0;
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .flexbox aside{
+        padding: 5%;
+    margin: 40px auto 0 auto;
+    border-left: none;
+
+
+    }
+
+    .menu{
+        width: 100%;
+        min-height: fit-content;
+    }
+    .menu li{
+        display: inline;
+        font-size: 14px;
+        padding: 0 10px;
+        border-bottom: none;
+        margin: 0 1.5vw;
+    }
+
+}
+/* Tablet (landscape) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : landscape) {
+
+}
+
+/* Tablet (portrait) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : portrait) {
+
+}
+
 
 
 @keyframes bordering {

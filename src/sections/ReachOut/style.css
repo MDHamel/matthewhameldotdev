@@ -17,3 +17,42 @@
     width:50%;
 }
 
+/* Phones ----------- */
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 480px) {
+    .buttonBox{
+        margin: 0 auto 0 auto;
+        justify-content:space-between;
+        width:100%;
+    }
+
+    .ReachOut .button{
+        width: auto;
+        margin: 10px;
+    }
+    
+}
+/* Tablet (landscape) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : landscape) {
+
+}
+
+/* Tablet (portrait) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : portrait) {
+    .buttonBox{
+        margin: 0 auto 0 auto;
+        width:100%;
+    }
+
+    .ReachOut .button{
+        width: auto;
+        margin: 10px;
+    }
+}

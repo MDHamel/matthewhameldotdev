@@ -2,7 +2,7 @@
 .titleSection{
     display: flex;
     justify-content: space-evenly;
-    width: 75%;
+    width: 90%;
     margin: auto;
 }
 
@@ -13,4 +13,29 @@
     min-width: 30%;
     width: auto;
     max-width: 60%;
+}
+
+/* Phones ----------- */
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 480px) {
+    .bar{
+        min-width: 22%;
+    }
+}
+
+/* Tablet (landscape) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : landscape) {
+/* Styles */
+}
+
+/* Tablet (portrait) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : portrait) {
+/* Styles */
 }
