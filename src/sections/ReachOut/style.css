@@ -31,6 +31,10 @@ and (max-device-width : 480px) {
         width: auto;
         margin: 10px;
     }
+    .ReachOut p{
+        padding: 0 5px
+    }
+    
     
 }
 /* Tablet (landscape) ----------- */

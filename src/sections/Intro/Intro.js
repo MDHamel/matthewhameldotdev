@@ -11,7 +11,7 @@ export default function Intro() {
             <div className="left" style={{ "--delay": "5.5s" }}>
                 <h3>Hello there, my name is </h3>
                 <GlitchText size="xlarge" delay="6.25s">Matthew Hamel</GlitchText>
-                <GlitchText size="small" delay="7.25s" center={true} animationOff={true}>Developer and Tech Enthusiast</GlitchText>
+                <GlitchText size="small" delay="7.25s" center={false} animationOff={true}>Developer and Tech Enthusiast</GlitchText>
             </div>
 
             <div className="right" style={{ "--delay": "8.25s" }}>

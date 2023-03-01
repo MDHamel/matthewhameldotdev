@@ -56,11 +56,12 @@ function Project(props) {
         <div className="project" onMouseEnter={() => { setSrc(props.data.gif) }} onMouseLeave={() => { setSrc(props.data.img) }}>
             <h1>{props.data.title}</h1>
             <img src={src} />
+            <div className="center">
+                <span className="glitchHover xsmall" onClick={() => { openLink(props.data.GitHub) }} >GitHub Code</span>
+                <span className="glitchHover xsmall" onClick={() => { openLink(props.data.link) }} >Link to Project</span>
+            </div>
             <aside>
-                <div className="center">
-                    <span className="glitchHover xsmall" onClick={() => { openLink(props.data.GitHub) }} >GitHub Code</span>
-                    <span className="glitchHover xsmall" onClick={() => { openLink(props.data.link) }} >Link to Project</span>
-                </div>
+                
                 <p>{props.data.desc}</p>
 
 

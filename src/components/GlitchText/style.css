@@ -1,70 +1,78 @@
-
-.stack,.nostack{
+.stack,
+.nostack {
     color: white;
     position: relative;
     display: block;
     min-height: calc(var(--size) * 1.22);
-    font-size: var(--size);  
+    font-size: var(--size);
     width: calc(var(--width) * 1.75);
-    
+
     text-align: left;
 }
 
-.xlarge{
+.xlarge {
     --size: 90px;
 }
-.large{
+
+.large {
     --size: 52px;
 }
-.medium{
+
+.medium {
     --size: 38px;
 }
-.small{
+
+.small {
     --size: 24px;
 }
-.xsmall{
-    --size:20px;
+
+.xsmall {
+    --size: 20px;
 }
 
 /* Phones ----------- */
-@media only screen 
-and (min-device-width : 320px) 
-and (max-device-width : 480px) {
-    .xlarge{
-        --size: 50px;
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    .xlarge {
+        --size: 42px;
     }
-    .large{
-        --size: 40px;
+
+    .large {
+        --size: 36px;
     }
-    .medium{
+
+    .medium {
         --size: 26px;
     }
-    .small{
-        --size: 18px;
+
+    .small {
+        --size: 20px;
     }
-    .xsmall{
-        --size: 14px;
+
+    .xsmall {
+        --size: 16px;
     }
 }
+
 /* Tablet (portrait) ----------- */
-@media only screen 
-and (min-device-width : 768px) 
-and (max-device-width : 1024px) 
-and (orientation : portrait) {
-    .xlarge{
-        --size: 90px;
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
+    .xlarge {
+        --size: 85px;
     }
-    .large{
+
+    .large {
         --size: 52px;
     }
-    .medium{
+
+    .medium {
         --size: 38px;
     }
-    .small{
+
+    .small {
         --size: 24px;
     }
-    .xsmall{
-        --size: 17px;
+
+    .xsmall {
+        --size: 18px;
     }
 }
 
@@ -73,7 +81,7 @@ and (orientation : portrait) {
 
 
 
-.glitchLine{
+.glitchLine {
     position: absolute;
     margin: 0;
     width: auto;
@@ -89,37 +97,41 @@ and (orientation : portrait) {
 
 
 
-.stack.center, .nostack.center{
+.stack.center,
+.nostack.center {
     margin: 0 auto;
 }
-.center .glitchLine{
+
+.center .glitchLine {
     margin-left: calc(50% - (var(--width)/2));
 }
 
 
-.stack span:not(.glitchHover, .off){
+.stack span:not(.glitchHover, .off) {
     --delay: calc((var(--index) * .12s) + var(--delay-time));
     animation: stack .34s backwards var(--delay), glitch 5s ease infinite calc(var(--delay-time) + 2s);
 }
 
-.stack .off{
+.stack .off {
     --delay: calc((var(--index) * .12s) + var(--delay-time));
     animation: stack .2s backwards var(--delay);
 }
 
-.nostack span:not(.glitchHover, .off){
+.nostack span:not(.glitchHover, .off) {
     animation: glitch 5s ease infinite 1s;
 }
 
-.stack span:nth-child(odd), .nostack span:nth-child(odd) {
+.stack span:nth-child(odd),
+.nostack span:nth-child(odd) {
     --glitch-translate: 20%;
 }
 
-.stack span:nth-child(even), .nostack span:nth-child(even) {
+.stack span:nth-child(even),
+.nostack span:nth-child(even) {
     --glitch-translate: -20%;
 }
 
-.glitchHover{
+.glitchHover {
     margin: 0;
     font-weight: bold;
     font-size: var(--size);
@@ -128,14 +140,14 @@ and (orientation : portrait) {
     width: fit-content;
 }
 
-.glitchHover:hover{
+.glitchHover:hover {
     scale: 1.15;
     translate: 0 -2px;
     animation: hoverglitch .9s linear infinite;
     transition: all .2s;
 }
 
-.button{
+.button {
     display: flex;
     justify-content: center;
     width: var(--width);
@@ -144,7 +156,7 @@ and (orientation : portrait) {
     font-size: var(--size);
     font-weight: bold;
     text-align: center;
-    
+
     cursor: pointer;
     user-select: none;
 
@@ -156,12 +168,12 @@ and (orientation : portrait) {
     transition: all .075s;
 }
 
-.button:hover{
-    scale:1.1;
+.button:hover {
+    scale: 1.1;
     background-color: var(--background-color-light);
 }
 
-.button:active{
+.button:active {
     scale: .95;
     transition: all .05s;
     background-color: var(--background-color);
@@ -205,7 +217,7 @@ and (orientation : portrait) {
         transform: translate(var(--glitch-translate)) skew(50deg);
     }
 
-    2%, 
+    2%,
     52% {
         text-shadow: 4px -6px 0 var(--m), -4px 6px 0 var(--c);
     }
@@ -249,9 +261,8 @@ and (orientation : portrait) {
 
     20%,
     70%,
-    100%
-    {
-        
+    100% {
+
         text-shadow: none;
         transform: none;
     }

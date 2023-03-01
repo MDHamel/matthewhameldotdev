@@ -11,7 +11,7 @@ export default function Navbar(){
     console.log(section, element[0].offsetTop);
     console.log(element)
     window.scrollTo({
-      top: element[0].offsetTop - (60 * (1+(1/element[0].offsetHeight))),
+      top: element[0].offsetTop - (75 * (1+(1/element[0].offsetHeight))),
       behavior: 'smooth'
     });
   }

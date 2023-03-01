@@ -1,16 +1,15 @@
-
-.projectHolder{
+.projectHolder {
     width: 88%;
     margin: auto;
     position: relative;
     display: flex;
-    justify-content:space-between;
+    justify-content: space-between;
     align-items: center;
-    
+
 }
 
-.project{
-    height: 600px;
+.project {
+    height: 620px;
     width: 28%;
 
     border: white 3px solid;
@@ -21,70 +20,72 @@
     transition: scale .15s, box-shadow .5s;
 }
 
-.project:hover{
+.project:hover {
     scale: 1.05;
 }
 
-.project:hover:nth-child(1){
+.project:hover:nth-child(1) {
     box-shadow: 10px 10px var(--m), -10px -10px var(--c);
 }
 
-.project:hover:nth-child(2){
+.project:hover:nth-child(2) {
     box-shadow: 10px -10px var(--m), -10px 10px var(--c);
 }
 
-.project:hover:nth-child(3){
+.project:hover:nth-child(3) {
     box-shadow: -10px -10px var(--m), 10px 10px var(--c);
 }
 
-.project h1{
+.project h1 {
     text-align: center;
     color: white;
     margin: 15px 0 25px 0;
 }
 
-.project img{
+.project img {
     width: 100%;
-    height: 50%;
+    height: 35%;
 
-    object-fit:cover;
+    object-fit: cover;
 }
 
-.project aside{
-    position: absolute;
-    word-wrap:normal;
+.project aside {
+    position: relative;
+    word-wrap: normal;
     padding-bottom: 20px;
     box-sizing: border-box;
-    line-height: 22px;
-    font-size: 18px;
-    padding-top: 15px;
+    
     max-width: 400px;
-    height: 35%;
+    height: 36%;
+    margin: 25px 0 25px 0;
     overflow-y: hidden;
 }
 
-.project aside:hover{
+.project aside:hover {
     overflow-y: scroll;
+
+}
+
+.project p {
+    padding: 0 15px 5px 15px;
+    margin-top: 0;
+}
+
+.project span {
+    border: white 2px solid;
+    padding: 5px 10px;
     
 }
 
-.project aside p{
-    padding: 0 15px 5px 15px;
-}
-
-.project aside span{
-    border: white 2px solid;
-    padding: 5px 10px;
-}
-
-.project aside .center{
+.project .center {
     width: 100%;
     display: flex;
     justify-content: space-around;
-    
+    margin-top: 25px;
+
 }
 
-.MadeByMe .button{
+.MadeByMe .button {
     margin: 60px auto;
     display: flex;
     align-items: center;
@@ -92,67 +93,82 @@
 
 
 /* Phones ----------- */
-@media only screen 
-and (min-device-width : 320px) 
-and (max-device-width : 480px) {
-    .projectHolder{
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    .projectHolder {
         flex-direction: column;
     }
 
-    .project{
+    .project img {
+        height: 35%;
+
+    }
+
+    .project span{
+        font-size: 18px;
+    }
+
+    .project {
         width: 100%;
-    
+        height: fit-content;
+
         border: white 3px solid;
-    
+
         cursor: pointer;
         user-select: none;
 
-        margin-bottom: 20px;
+        margin-bottom: 40px;
     }
 
-    .project aside{
+    .project aside {
         max-width: 95%;
-        margin: 10px 2.5%;
+        margin: 25px 2.5%;
         overflow: scroll;
+        height: fit-content;
+
     }
 
-    .button{
+    .button {
         width: 75vw;
         padding: 5%;
-        font-size: 20px;
     }
 
 }
 
 /* Tablet (portrait) ----------- */
-@media only screen 
-and (min-device-width : 768px) 
-and (max-device-width : 1024px) 
-and (orientation : portrait) {
-    .projectHolder{
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
+    .projectHolder {
         flex-direction: column;
     }
 
-    .project{
-        height: 600px;
+    .project {
+        height: 750px;
         width: 100%;
-    
+
         border: white 3px solid;
-    
+
         cursor: pointer;
         user-select: none;
 
-        margin-bottom: 20px;
+        margin-bottom: 40px;
+
     }
 
-    .project aside{
+    .project aside {
         max-width: 95%;
-        margin: 0 2.5%;
+        margin: 25px 2.5%;
+        height: fit-content;
     }
 
-    .button{
+    .button {
         width: 65vw;
         padding: 2% 5%;
-        
+        font-size: 20px;
+
+    }
+
+    .project img {
+
+        height: 52%;
+
     }
 }

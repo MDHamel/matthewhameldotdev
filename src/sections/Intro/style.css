@@ -3,6 +3,7 @@
   justify-content: space-between;
   align-items: center;
   height: 80vh;
+  font-size: 24px;
 }
 
 .Intro p,
@@ -42,12 +43,10 @@ span {
 }
 
 /* Phones ----------- */
-@media only screen 
-and (min-device-width : 320px) 
-and (max-device-width : 480px) {
+@media only screen and (min-device-width : 300px) and (max-device-width : 480px) {
   .Intro {
     display: block;
-    margin-top: 100px;
+    margin-top: 0%;
     margin-left: 0;
     margin-right: 0;
     padding: 5%;
@@ -57,42 +56,37 @@ and (max-device-width : 480px) {
     overflow-x: hidden;
   }
 
-  .Intro .right{
+  .Intro .right {
     margin-left: 0;
     margin-right: 0;
-    margin-top: 65%;
+    margin-top: 30vh;
     width: 100%;
   }
 
-  .Intro .left{
-    margin-top: 20%;
+  .Intro .left {
+    margin-top: 10vh;
 
     margin-left: 0;
     margin-right: 0;
     width: 100%;
   }
 
-  .Intro .multitextBox span{
+  .Intro .multitextBox span {
     position: absolute;
-    left:0;
-    right:0;
+    left: 0;
+    right: 0;
     margin: auto;
     text-align: center;
   }
 }
+
 /* Tablet (landscape) ----------- */
-@media only screen 
-and (min-device-width : 768px) 
-and (max-device-width : 1024px) 
-and (orientation : landscape) {
-/* Styles */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+  /* Styles */
 }
 
 /* Tablet (portrait) ----------- */
-@media only screen 
-and (min-device-width : 768px) 
-and (max-device-width : 1024px) 
-and (orientation : portrait) {
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
   .Intro {
     display: block;
     margin-left: 0;
@@ -103,24 +97,24 @@ and (orientation : portrait) {
     box-sizing: border-box;
   }
 
-  .Intro .right{
-    margin-left: 0;
+  .Intro .right {
+    margin-left: 7vw;
     margin-right: 0;
-    margin-top: 35%;
+    margin-top: 35vh;
     width: 100%;
   }
 
-  .Intro .left{
-    margin-top: 20%;
+  .Intro .left {
+    margin-top: 15vh;
     margin-left: 0;
     margin-right: 0;
     width: 100%;
   }
 
-  .Intro .multitextBox span{
+  .Intro .multitextBox span {
     position: absolute;
-    left:0;
-    right:0;
+    left: 0;
+    right: 0;
     margin: auto;
     text-align: center;
   }

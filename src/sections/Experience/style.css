@@ -1,9 +1,9 @@
-.flexbox{
+.flexbox {
     display: flex;
     color: var(--font-color);
 
-    height: 420px;
-    width: 75%;
+    height: 50vh;
+    width: 80%;
     margin: auto;
 
 
@@ -11,25 +11,25 @@
     -moz-box-sizing: border-box;
 }
 
-.menu{
+.menu {
     width: 25%;
     list-style-type: none;
     margin: 0;
     min-height: 100%;
     padding-left: 4px;
-    
+
 }
 
-.menu li{
+.menu li {
     width: 100%;
     padding: 15px 25px;
-    margin: 10px 0;
+    margin: 25% 0;
 
     user-select: none;
     cursor: pointer;
     text-align: center;
 
-    border-bottom: 1px white solid;
+    border: 1px white solid;
 
     box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -37,122 +37,150 @@
     transition: all .35s;
 }
 
-aside li{
+aside li {
     margin: 10px;
-    list-style:square;
+    list-style: square;
 }
 
-.flexbox #selected{
+.flexbox #selected {
     scale: 1;
-    padding: 20px 25px;
-    margin: 15px 0;
+    padding: 8% 25%;
+    margin: 25% 0;
     translate: 1px 0;
-    background-color: rgba(255,255,255, .15);
+    background-color: rgba(255, 255, 255, .15);
     border: none;
 
     --intro-time: .45s;
 
-    animation: bordering var(--intro-time) ease forwards, shadowglitch 1.5s linear calc(var(--intro-time) + .05s) infinite;    
+    animation: bordering var(--intro-time) ease forwards, shadowglitch 1.5s linear calc(var(--intro-time) + .05s) infinite;
 }
 
-.flexbox aside{
+.flexbox aside {
     width: 85%;
-    padding: 10px 50px;
+    padding: 2% 5%;
     margin-left: 25px;
-    min-height: 100%;
+    max-height: 100%;
 
     border-left: 2px white solid;
 
-    box-sizing: border-box;
     -moz-box-sizing: border-box;
 
     overflow-y: scroll;
 }
 
 /* Phones ----------- */
-@media only screen 
-and (min-device-width : 320px) 
-and (max-device-width : 480px) {
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
 
-    .flexbox{
+    .flexbox {
         margin: 0;
         width: 100%;
+        height: 80vh;
         flex-direction: column;
     }
 
-    .flexbox aside{
+    .flexbox aside {
         padding: 5%;
-    margin: 40px auto 0 auto;
-    border-left: none;
-
-
+        margin: 5vh auto 0 auto;
+        border: 2px solid white;
     }
 
-    .menu{
-        width: 100%;
+    .Experience aside {}
+
+    .menu {
+        width: 95%;
         min-height: fit-content;
     }
-    .menu li{
+
+    .menu li {
         display: inline;
         font-size: 14px;
-        padding: 0 10px;
-        border-bottom: none;
-        margin: 0 1.5vw;
+        padding: 2%;
+        margin: 0 2%;
+    }
+
+    .flexbox #selected {
+        padding: 5%;
     }
 
 }
-/* Tablet (landscape) ----------- */
-@media only screen 
-and (min-device-width : 768px) 
-and (max-device-width : 1024px) 
-and (orientation : landscape) {
 
-}
+/* Tablet (landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {}
 
 /* Tablet (portrait) ----------- */
-@media only screen 
-and (min-device-width : 768px) 
-and (max-device-width : 1024px) 
-and (orientation : portrait) {
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
+
+    .menu li {
+        font-size: 16px;
+        padding: 8%;
+    }
+
+    .flexbox #selected {
+        padding: 10% 5%;
+    }
+
+    .menu {
+        width: 40%;
+        padding-right: 5%;
+
+    }
+
+    .flexbox {
+        width: 100%;
+    }
+
+    ul {
+        padding: 1%;
+    }
 
 }
 
 
 
 @keyframes bordering {
-    0%, 10%{
+
+    0%,
+    10% {
         box-shadow: none;
     }
 
-    50%{
+    50% {
         box-shadow: 4px 7px 0px 4px var(--m), -7px -4px 0px 4px var(--c);
     }
 
-    100%{
+    100% {
         box-shadow: -2px -1px 0px 1px var(--m), 1px 2px 0px 1px var(--c);
     }
 }
 
-@keyframes shadowglitch{
-    0%, 21%, 38%, 44%, 65%, 69%, 88%, 100%{
+@keyframes shadowglitch {
+
+    0%,
+    21%,
+    38%,
+    44%,
+    65%,
+    69%,
+    88%,
+    100% {
         box-shadow: -2px -1px 0px 1px var(--m), 1px 2px 0px 1px var(--c);
     }
 
-    22%{
+    22% {
         box-shadow: -7px -4px 0px 1px var(--m), 1px 2px 0px 1px var(--c);
     }
 
-    45%{
+    45% {
         box-shadow: -2px -1px 0px 1px var(--m), 4px 7px 0px 1px var(--c);
 
     }
 
-    70%{
+    70% {
         box-shadow: -4px -7px 0px 1px var(--m), 1px 2px 0px 1px var(--c);
 
     }
 
-    90%{
+    90% {
         box-shadow: -2px -1px 0px 1px var(--m), 6px 4px 0px 1px var(--c);
     }
 }

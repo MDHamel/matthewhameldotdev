@@ -1,15 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 @import url("./color.css");
 
-.App{
+.App {
   display: flex;
   color: white;
   align-items: center;
   width: 100vw;
-  
+
 }
 
-.middle{
+.middle {
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -17,15 +17,15 @@
   align-items: center;
 }
 
-main{
+main {
   width: 1400px;
   margin: auto;
 }
 
-.content{
+.content {
   margin: 0 0;
   font-size: 18px;
-  font-family:  Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
 
   max-width: 100%;
   padding: 0 5%;
@@ -33,34 +33,32 @@ main{
   box-sizing: border-box;
 
   margin-bottom: 30vh;
+  overflow: hidden;
+
 }
 
 /* Phones ----------- */
-@media only screen 
-and (min-device-width : 320px) 
-and (max-device-width : 480px) {
-  .content{
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+  .content {
     margin-bottom: 20vh;
     padding: 0 2%;
 
   }
 
-  main{
+  main {
     box-sizing: border-box;
     width: 100vw;
     padding: 0;
   }
 }
+
 /* Tablet (landscape) ----------- */
-@media only screen 
-and (min-device-width : 768px) 
-and (max-device-width : 1024px) 
-and (orientation : landscape) {
-  .content{
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+  .content {
     margin-bottom: 20vh;
   }
 
-  main{
+  main {
     box-sizing: border-box;
     width: 100vw;
     padding: 0 5px;
@@ -68,35 +66,25 @@ and (orientation : landscape) {
 }
 
 /* Tablet (portrait) ----------- */
-@media only screen 
-and (min-device-width : 768px) 
-and (max-device-width : 1024px) 
-and (orientation : portrait) {
-  .content{
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
+  .content {
     margin-bottom: 20vh;
   }
 
-  main{
+  main {
     box-sizing: border-box;
     width: 100vw;
     padding: 0 25px;
   }
 }
 
-p{
+p {
   line-height: 25px;
 }
 
 
 /* phone */
-@media screen and (max-width:599px) {
-
-}
+@media screen and (max-width:599px) {}
 
 /* tablet */
-@media screen and (max-width:979px) {
-
-}
-
-
-
+@media screen and (max-width:979px) {}

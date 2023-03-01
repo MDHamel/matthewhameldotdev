@@ -52,6 +52,7 @@ and (max-device-width : 480px) {
     .AboutMe .flex{
         flex-direction: column;
         margin: auto;
+        min-height: fit-content;
     }
 
     .AboutMe article{
@@ -62,9 +63,11 @@ and (max-device-width : 480px) {
     }
 
     .meImage{
-        width: 75vw;
-        height: 75vw;
-        margin: 50px auto 0 auto;
+        width: 70vw;
+        height: 70vw;
+        margin: 50px auto 35px auto;
+
+        overflow:visible;
 
 
         filter: grayscale(0);
@@ -92,7 +95,7 @@ and (orientation : portrait) {
 
     .meImage{
         
-        margin: 50px auto 0 auto;
+        margin: 50px auto 35px auto;
         filter: grayscale(0);
         box-shadow: 10px 10px var(--m), -15px -10px var(--c);
     }
