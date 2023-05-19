@@ -7,12 +7,12 @@ import "./style.css"
 
 export default function MadeByMe() {
     const blogger = {
-        title: "Blogger",
-        desc: "A personal blog I created in the classic Twitter style. Using my own server backend, I can generate new posts that display from newest to oldest. ( Note: You may need to wait for the server to start up before viewing posts. )",
-        img: pubUrl("/previews/blogger-preview.jpg"),
-        gif: pubUrl("/previews/blogger-preview.gif"),
-        GitHub: "https://GitHub.com/MDHamel/Blogger",
-        link: "https://blog.matthewhamel.dev"
+        title: "Focus Flow",
+        desc: "A timer inspired by the Pomodoro Technique, designed to enhance productivity. Set your work intervals for 25 minutes, followed by a refreshing 5-minute break. Every 4th break offers a longer duration, ranging from 15 to 30 minutes. Personalize your timer with a selection of soothing background color palettes. Tailor the length of your work and break times to suit your preferences. Boost your focus and efficiency with this versatile and customizable timer.",
+        img: pubUrl("/previews/focus-flow.png"),
+        gif: pubUrl("/previews/focus-flow.gif"),
+        GitHub: "https://github.com/MDHamel/FocusTimer",
+        link: "https://focus.matthewhamel.dev"
     }
 
     const ramblerumble = {
@@ -25,16 +25,16 @@ export default function MadeByMe() {
     }
 
     const gallery = {
-        title: "Image-In",
-        desc: "Keeping track of your photos is difficult, so naturally uploading them to the cloud is ideal. I created a custom image gallery using my own server backend and google drive storage to make a viewable image gallery with titles, comments, and tags. ( Note: App might need a few seconds to wake up server before content loads. )",
-        img: pubUrl("/previews/image-in-preview.jpg"),
-        gif: pubUrl("/previews/image-in-preview.gif"),
-        GitHub: "https://GitHub.com/MDHamel/Image-in",
-        link: "https://imagein.matthewhamel.dev"
+        title: "Shadow Stream",
+        desc: "A specialized audio-video app for seamless streaming with Genki's ShadowCast capture card in mind. Enjoy 1080p/720p resolution and choose between 30/60fps at 720p or 30fps at 1080p. Minimal video and audio lag for an immersive gaming experience. Made in C# with OpenCV for optimal performance and low resource consumption.",
+        img: pubUrl("/previews/shadow-stream.png"),
+        gif: pubUrl("/previews/shadow-stream.gif"),
+        GitHub: "https://github.com/MDHamel/ShadowStream",
+        link: "https://github.com/MDHamel/ShadowStream/releases/"
     }
 
     return (
-        <section className="MadeByMe content">
+        <section id="MadeByMe" className="MadeByMe content">
             <SectionTitle>Made by Me</SectionTitle>
             <div className="projectHolder">
                 <Project data={blogger} />

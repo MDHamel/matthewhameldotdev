@@ -1,7 +1,7 @@
 nav {
     width: 100vw;
     padding: 3px 0 3px 0;
-    height: 75px;
+    height: 60px;
 
     position: fixed;
     display: flex;
@@ -21,6 +21,7 @@ nav {
 nav ul {
     position: absolute;
     right: 5%;
+    height: 100%;
     margin: auto;
     vertical-align: center;
     text-decoration: none;
@@ -29,9 +30,9 @@ nav ul {
 
 nav li {
     list-style: none;
-    margin: 2.5% 1.5vw;
-    padding: 1vh 10px;
-    width: fit-content;
+    margin: auto 1.5vw;
+    padding: .1% .5%;
+    width: 120px;
     cursor: pointer;
     transition: all .1s;
     font-weight: 600;
@@ -39,7 +40,6 @@ nav li {
 
 .logoBox {
     scale: 0.095;
-
     margin-left: 50px;
     z-index: 100;
     cursor: pointer;

@@ -78,28 +78,39 @@ aside li {
         flex-direction: column;
     }
 
-    .flexbox aside {
+    .Experience aside:not(.titleSection) {
         padding: 5%;
+        width: 95%;
         margin: 5vh auto 0 auto;
         border: 2px solid white;
     }
 
-    .Experience aside {}
 
     .menu {
-        width: 95%;
+        margin: 0;
+        width: 100%;
         min-height: fit-content;
+        display: flex;
+        justify-content: space-between;
     }
 
     .menu li {
-        display: inline;
+        position: relative;
         font-size: 14px;
         padding: 2%;
-        margin: 0 2%;
+        width: 30%;
+        height: fit-content;
+        margin: 0 2px;
+        z-index: 10;
+
     }
 
     .flexbox #selected {
-        padding: 5%;
+        padding: 2%;
+        scale: 1.1;
+        z-index: 100;
+        margin: 0 20px;
+
     }
 
 }

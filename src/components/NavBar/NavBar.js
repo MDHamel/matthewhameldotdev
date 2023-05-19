@@ -22,7 +22,7 @@ export default function Navbar(){
     <nav style={{"--delay":"9.75s"}}>
       <Logo />
       <ul>
-        {navItems.map((item, index)=>{return <li onClick={()=>{scrollTo(item)}} key={index}><GlitchHover>{item}</GlitchHover></li>})}
+        {navItems.map((item, index)=>{return <li key={index}><a href={`#${item.split(" ").join("")}`}><GlitchHover>{item}</GlitchHover></a></li>})}
       </ul>
       
     </nav>

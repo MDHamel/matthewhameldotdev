@@ -7,7 +7,7 @@ export default function ReachOut(){
     const email = () =>{    document.location.href= 'mailto:matt@matthewhamel.dev'; };
 
     return(
-        <section className="ReachOut content">
+        <section id="ReachOut" className="ReachOut content">
             <div>
                 <GlitchText size="large" nostack={true} center={true}>Contact Me</GlitchText>
             </div>

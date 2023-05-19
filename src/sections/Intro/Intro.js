@@ -7,7 +7,7 @@ export default function Intro() {
 
     return (
 
-        <section className="Intro content">
+        <section id="Intro" className="Intro content">
             <div className="left" style={{ "--delay": "5.5s" }}>
                 <h3>Hello there, my name is </h3>
                 <GlitchText size="xlarge" delay="6.25s">Matthew Hamel</GlitchText>

@@ -80,7 +80,7 @@ export default function Experience() {
     });
 
     return (
-        <section className="Experience content">
+        <section id="Experience" className="Experience content">
             <SectionTitle>Experience</SectionTitle>
             <div className="flexbox">
                 <ul className="menu">

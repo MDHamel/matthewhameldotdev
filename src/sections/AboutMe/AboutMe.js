@@ -17,7 +17,7 @@ export default function AboutMe(){
       }
 
     return(
-        <section className="AboutMe content">
+        <section id="AboutMe" className="AboutMe content">
             <SectionTitle>About Me</SectionTitle>
             <div className="flex">
                 <article>

@@ -33,7 +33,7 @@
 /* Phones ----------- */
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
     .xlarge {
-        --size: 42px;
+        --size: 40px;
     }
 
     .large {
