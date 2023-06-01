@@ -33,6 +33,7 @@
     object-fit: cover;
     object-position: 0px -18px;
     filter: grayscale(.4);
+    margin-top: 7.5vh;
 
     transition: all .25s, box-shadow .4s;
     

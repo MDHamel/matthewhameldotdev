@@ -21,9 +21,10 @@ export default function AboutMe(){
             <SectionTitle>About Me</SectionTitle>
             <div className="flex">
                 <article>
-                    <p>My name is Matthew Hamel, and I am a developer born and raised in the San Francisco bay area. I started programming in high school and, since then, have been captivated by the practice.</p>
-                    <p>I pursued my passion in college at CSU East Bay and graduated with a bachelor's in computer science. At the same time, I took the knowledge I was accumulating and started tutoring at theCoderSchool, where I coached students aged eight to eighteen on topics ranging from novice to advanced topics. At theCoderSchool, I honed my skills and learned new technologies to accommodate my students' individual needs. </p>
-                    <p>Today, I am looking for new opportunities, so feel free to reach out with opportunities or drop by and say hello!</p>
+                    <p>My name is Matthew Hamel, a driven developer based in the vibrant San Francisco Bay Area. From an early age, I have been captivated by the boundless potential of technology and its impact on the world.</p>
+                    <p>To further my knowledge and skills, I pursued a degree in computer science at CSU East Bay, graduating with a bachelor's degree. Simultaneously, I embarked on a fulfilling journey as a tutor at theCoderSchool, mentoring students ranging from beginners to advanced learners. This experience allowed me to refine my expertise and adapt to diverse technological demands, catering to each student's unique requirements.</p>
+                    <p>As I embark on a new chapter, I am eagerly seeking fresh opportunities. Please don't hesitate to get in touch if you have any exciting prospects or simply wish to connect.</p>
+                    <p>I look forward to hearing from you!</p>
                 </article>
                 
                 <img className="meImage" src={pubUrl("/profpic.jpg")} />
